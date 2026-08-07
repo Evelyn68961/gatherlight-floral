@@ -4,6 +4,8 @@ A brand site for a fictional Taipei floral studio — built as a front-end demo.
 Hand-coded vanilla **HTML / CSS / JS**, no framework, no build step.
 Open `index.html` and it runs.
 
+**🔗 Live demo: [gatherlight-floral.vercel.app](https://gatherlight-floral.vercel.app)**
+
 ![Gather Light Floral Studio — homepage](assets/preview.png)
 
 > **Note:** This is a portfolio demo. The studio, services, products, prices and
