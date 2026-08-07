@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="婚禮與活動佈置(佔位示意圖)">
+  <rect width="600" height="400" fill="#E8EDE7"/>
+  <path d="M150 380V220a150 150 0 0 1 300 0v160" fill="none" stroke="#475A4B" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#7C8F72">
+    <path d="M176 232c-30-14-42-38-36-68 30 10 42 34 36 68Z"/>
+    <path d="M424 232c30-14 42-38 36-68-30 10-42 34-36 68Z"/>
+    <path d="M242 148c-16-28-14-54 6-76 18 22 20 48-6 76Z"/>
+    <path d="M358 148c16-28 14-54-6-76-18 22-20 48 6 76Z"/>
+  </g>
+  <circle cx="300" cy="76" r="30" fill="#B4705A"/><circle cx="300" cy="76" r="11" fill="#F3E3DC"/>
+  <circle cx="212" cy="112" r="22" fill="#FAF6F0" stroke="#475A4B" stroke-width="4"/>
+  <circle cx="388" cy="112" r="22" fill="#C99A83"/>
+  <circle cx="164" cy="196" r="18" fill="#B4705A" opacity=".6"/>
+  <circle cx="436" cy="196" r="18" fill="#FAF6F0" stroke="#475A4B" stroke-width="3"/>
+  <circle cx="152" cy="286" r="14" fill="#C99A83"/>
+  <circle cx="448" cy="286" r="14" fill="#7C8F72"/>
+  <path d="M96 380h408" stroke="#475A4B" stroke-width="4" opacity=".3" stroke-linecap="round"/>
+</svg>

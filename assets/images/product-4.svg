@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="陶盆綠植(佔位示意圖)">
+  <rect width="500" height="500" fill="#E8EDE7"/>
+  <rect x="0" y="360" width="500" height="140" fill="#DCE3DA"/>
+  <g stroke="#475A4B" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M250 360V158"/>
+    <path d="M250 300C204 296 176 268 172 216"/>
+    <path d="M250 274C296 270 324 242 328 190"/>
+    <path d="M250 246C214 242 192 220 188 180"/>
+    <path d="M250 218C286 214 308 192 312 152"/>
+  </g>
+  <g fill="#7C8F72">
+    <path d="M250 300c-46-4-74-32-78-84 46 6 74 32 78 84Z"/>
+    <path d="M250 274c46-4 74-32 78-84-46 6-74 32-78 84Z"/>
+    <path d="M250 246c-36-4-58-26-62-66 36 6 58 26 62 66Z"/>
+    <path d="M250 218c36-4 58-26 62-66-36 6-58 26-62 66Z"/>
+  </g>
+  <path d="M250 158c-22-2-34-18-34-44 22 4 34 18 34 44Z" fill="#475A4B"/>
+  <path d="M176 360h148l-16 90a24 24 0 0 1-24 20h-68a24 24 0 0 1-24-20Z" fill="#C99A83"/>
+  <path d="M168 340h164a8 8 0 0 1 8 8v12a8 8 0 0 1-8 8H168a8 8 0 0 1-8-8v-12a8 8 0 0 1 8-8Z" fill="#B4705A"/>
+</svg>

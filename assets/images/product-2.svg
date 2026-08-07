@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="白綠系花束(佔位示意圖)">
+  <rect width="500" height="500" fill="#E8EDE7"/>
+  <circle cx="250" cy="200" r="128" fill="#FAF6F0" opacity=".8"/>
+  <g stroke="#475A4B" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M250 366V172"/><path d="M250 352 190 250"/><path d="M250 352 310 254"/>
+    <path d="M250 338 166 302"/><path d="M250 338 334 306"/>
+  </g>
+  <g fill="#7C8F72">
+    <path d="M232 318c-40-4-64-24-68-58 38-2 64 16 68 58Z"/>
+    <path d="M272 302c38-6 60-26 62-58-38 0-60 20-62 58Z"/>
+    <path d="M236 250c-30-8-48-26-50-54 30 2 48 20 50 54Z"/>
+  </g>
+  <circle cx="190" cy="250" r="30" fill="#FAF6F0" stroke="#475A4B" stroke-width="5"/>
+  <circle cx="190" cy="250" r="11" fill="#7C8F72"/>
+  <circle cx="310" cy="254" r="26" fill="#FAF6F0" stroke="#475A4B" stroke-width="4"/>
+  <circle cx="250" cy="172" r="36" fill="#FAF6F0" stroke="#475A4B" stroke-width="5"/>
+  <circle cx="250" cy="172" r="13" fill="#C99A83"/>
+  <circle cx="166" cy="302" r="18" fill="#7C8F72" opacity=".6"/>
+  <circle cx="334" cy="306" r="16" fill="#B4705A" opacity=".4"/>
+  <path d="M176 366h148l-42 96a22 22 0 0 1-20 13h-24a22 22 0 0 1-20-13Z" fill="#DCE3DA" stroke="#475A4B" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M212 412h76" stroke="#475A4B" stroke-width="6" stroke-linecap="round"/>
+</svg>

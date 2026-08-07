@@ -1,0 +1,95 @@
+/* ==========================================================================
+   tokens.css — design tokens extracted from Figma
+   拾光花室 Gather Light Floral Studio
+   Change a value here and it propagates through every page.
+   Everything downstream references these. Change values here, not in components.
+   ========================================================================== */
+
+:root {
+  /* ---- Color ---- */
+  --c-moss:        #475A4B;
+  --c-moss-dark:   #334437;
+  --c-moss-soft:   #E8EDE7;
+  --c-clay:        #B4705A;
+  --c-clay-soft:   #F3E3DC;
+  --c-paper:       #FAF6F0;
+  --c-surface:     #FFFFFF;
+  --c-ink:         #2A2724;
+  --c-ink-muted:   #7A7369;
+  --c-line:        #E5DCD0;
+
+  /* focus ring — accessibility, not from Figma */
+  --c-focus:       #B4705A;
+
+  /* ---- Typography ---- */
+  --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+  --font-sans:  "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+                -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --fs-display:  3.5rem;   /* 56 */
+  --fs-h1:       2.75rem;  /* 44 */
+  --fs-h2:       2rem;     /* 32 */
+  --fs-h3:       1.25rem;  /* 20 */
+  --fs-body-lg:  1.125rem; /* 18 */
+  --fs-body:     1rem;     /* 16 */
+  --fs-caption:  0.8125rem;/* 13 */
+  --fs-eyebrow:  0.75rem;  /* 12 */
+
+  --lh-display:  1.18;
+  --lh-heading:  1.3;
+  --lh-body:     1.75;
+
+  --ls-eyebrow:  0.18em;
+
+  /* ---- Spacing scale ---- */
+  --s-1:  0.25rem;  /*  4 */
+  --s-2:  0.5rem;   /*  8 */
+  --s-3:  0.75rem;  /* 12 */
+  --s-4:  1rem;     /* 16 */
+  --s-6:  1.5rem;   /* 24 */
+  --s-8:  2rem;     /* 32 */
+  --s-12: 3rem;     /* 48 */
+  --s-16: 4rem;     /* 64 */
+  --s-24: 6rem;     /* 96 */
+  --s-32: 8rem;     /* 128 */
+
+  /* ---- Radius ---- */
+  --r-card:   14px;
+  --r-image:  10px;
+  --r-pill:   999px;
+
+  /* ---- Shadow ---- */
+  --sh-card:       0 2px 14px rgba(42, 39, 36, 0.07);
+  --sh-card-hover: 0 10px 28px rgba(42, 39, 36, 0.12);
+  --sh-header:     0 1px 0 var(--c-line), 0 4px 16px rgba(42, 39, 36, 0.05);
+
+  /* ---- Layout ---- */
+  --container:      1120px;
+  --container-pad:  var(--s-6);
+  --header-h:       72px;
+
+  /* ---- Motion ---- */
+  --t-fast: 160ms ease;
+  --t-base: 240ms ease;
+}
+
+/* Fluid down-scaling of the display/heading sizes on small frames.
+   Matches Figma's 375 / 768 / 1440 frames. */
+@media (max-width: 900px) {
+  :root {
+    --fs-display: 2.5rem;  /* 40 */
+    --fs-h1:      2.125rem;/* 34 */
+    --fs-h2:      1.75rem; /* 28 */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-display:    2.125rem; /* 34 */
+    --fs-h1:         1.875rem; /* 30 */
+    --fs-h2:         1.5rem;   /* 24 */
+    --fs-body-lg:    1.0625rem;
+    --container-pad: var(--s-4);
+    --header-h:      60px;
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>服務內容｜拾光花室</title>
+<meta name="description" content="拾光花室的服務內容：日常花禮、婚禮與活動佈置、空間長期配花。">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳至主要內容</a>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="拾光花室 首頁">
+      <img src="assets/brand/logo.svg" alt="" width="32" height="32">
+      <span class="logo__name">拾光花室</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">
+      <span></span>
+      <span class="sr-only">開啟選單</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="主選單">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#about">關於</a></li>
+        <li><a class="nav__link" href="index.html#services">服務</a></li>
+        <li><a class="nav__link" href="index.html#products">花禮</a></li>
+        <li><a class="nav__link" href="index.html#course">課程</a></li>
+        <li><a class="nav__link" href="index.html#contact">聯絡</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm" href="index.html#contact">預約諮詢</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <nav aria-label="麵包屑">
+      <ol class="crumb">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="index.html#services">服務項目</a></li>
+        <li aria-current="page" id="svcCrumb">服務內容</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+
+<noscript>
+  <div class="container" style="padding-block:var(--s-16)">
+    <h1>服務內容</h1>
+    <p class="lede" style="margin-top:var(--s-4)">
+      這個頁面需要 JavaScript 才能載入服務內容。請直接查看
+      <a class="link-arrow" href="index.html#services">首頁的服務項目</a>，
+      或來電 02-2700-0000。
+    </p>
+  </div>
+</noscript>
+
+<div id="serviceRoot" hidden>
+
+  <!-- ============================================================= Hero -->
+  <section class="section section--tight">
+    <div class="container svc-hero">
+      <div>
+        <span class="eyebrow" id="svcEyebrow"></span>
+        <h1 id="svcTitle"></h1>
+        <p class="lede" style="margin-top:var(--s-4)" id="svcLede"></p>
+        <p class="svc-price" id="svcPrice"></p>
+        <div style="display:flex; gap:var(--s-3); margin-top:var(--s-8); flex-wrap:wrap">
+          <a class="btn btn--primary" href="index.html#contact">詢問這項服務</a>
+          <a class="btn btn--ghost" href="index.html#products">看花禮商品</a>
+        </div>
+      </div>
+      <div>
+        <img id="svcImg" src="" alt="" width="600" height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= Includes -->
+  <section class="section section--tight section--soft">
+    <div class="container">
+      <div class="split" style="align-items:start">
+        <div>
+          <span class="eyebrow">What's included</span>
+          <h2>服務包含</h2>
+          <ul class="check-list" style="margin-top:var(--s-6)" id="svcIncludes"></ul>
+        </div>
+        <div>
+          <span class="eyebrow">Who it's for</span>
+          <h2>適合的情境</h2>
+          <ul class="chip-row" style="margin-top:var(--s-6)" id="svcSuit"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ Steps -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Process</span>
+        <h2>進行方式</h2>
+      </div>
+      <ol class="steps" id="svcSteps"></ol>
+    </div>
+  </section>
+
+  <!-- ============================================================ Plans -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">Pricing</span>
+        <h2>方案與價格</h2>
+        <p>實際報價依花材當季供應與場地條件調整，以下為參考範圍。</p>
+      </div>
+      <div class="plans" id="svcPlans"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================== FAQ -->
+  <section class="section section--tight">
+    <div class="container" style="max-width:760px">
+      <div class="section__head">
+        <span class="eyebrow">FAQ</span>
+        <h2>常見問題</h2>
+      </div>
+      <div class="faq" id="svcFaq"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================== Others -->
+  <section class="section section--tight section--soft">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">More</span>
+        <h2>其他服務</h2>
+      </div>
+      <div class="grid grid--2" id="svcOthers"></div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="logo">
+          <img src="assets/brand/logo.svg" alt="" width="32" height="32">
+          <span class="logo__name">拾光花室</span>
+        </div>
+        <p class="footer__tag">
+          Gather Light Floral Studio<br>
+          日常花禮・婚禮佈置・空間配花・花藝課程
+        </p>
+      </div>
+      <div>
+        <h3>服務項目</h3>
+        <ul>
+          <li><a href="service.html?s=1">日常花禮</a></li>
+          <li><a href="service.html?s=2">婚禮與活動佈置</a></li>
+          <li><a href="service.html?s=3">空間長期配花</a></li>
+          <li><a href="index.html#course">花藝課程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>聯絡資訊</h3>
+        <ul>
+          <li>台北市松山區民生東路五段 000 巷 00 號</li>
+          <li><a href="tel:+886227000000">02-2700-0000</a></li>
+          <li><a href="mailto:hello@gatherlight.example">hello@gatherlight.example</a></li>
+          <li>週二 – 週六 11:00–19:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 拾光花室 Gather Light Floral Studio. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/services.js"></script>
+</body>
+</html>

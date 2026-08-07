@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="拾光花室">
+  <path d="M16 30V13" stroke="#475A4B" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M16 24c-4.2 0-6.9-2.2-7.4-6.4 4.2-.6 7.1 1.7 7.4 6.4Z" fill="#E8EDE7" stroke="#475A4B" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M16 20c4.2 0 6.9-2.2 7.4-6.4-4.2-.6-7.1 1.7-7.4 6.4Z" fill="#E8EDE7" stroke="#475A4B" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="16" cy="8" r="5.2" fill="#B4705A"/>
+  <circle cx="16" cy="8" r="1.9" fill="#F3E3DC"/>
+</svg>

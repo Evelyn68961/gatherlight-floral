@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="花藝課程(佔位示意圖)">
+  <rect width="800" height="600" fill="#F3E3DC"/>
+  <rect x="0" y="420" width="800" height="180" fill="#EBD8CF"/>
+  <rect x="70" y="410" width="660" height="12" rx="6" fill="#475A4B" opacity=".3"/>
+
+  <g stroke="#475A4B" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M240 410V276"/><path d="M240 372 194 316"/><path d="M240 366 288 320"/>
+  </g>
+  <g fill="#7C8F72"><path d="M226 356c-28-6-44-22-46-48 28-2 44 14 46 48Z"/></g>
+  <circle cx="194" cy="316" r="26" fill="#B4705A"/><circle cx="194" cy="316" r="10" fill="#F3E3DC"/>
+  <circle cx="288" cy="320" r="22" fill="#FAF6F0" stroke="#475A4B" stroke-width="4"/>
+  <circle cx="240" cy="276" r="28" fill="#C99A83"/>
+  <path d="M204 410h72l-10 66a18 18 0 0 1-18 15h-16a18 18 0 0 1-18-15Z" fill="#475A4B"/>
+
+  <g stroke="#475A4B" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M560 410V264"/><path d="M560 368 512 306"/><path d="M560 360 610 310"/>
+  </g>
+  <g fill="#7C8F72"><path d="M576 346c28-8 44-26 44-52-28 0-44 18-44 52Z"/></g>
+  <circle cx="512" cy="306" r="24" fill="#7C8F72"/>
+  <circle cx="610" cy="310" r="20" fill="#B4705A" opacity=".7"/>
+  <circle cx="560" cy="264" r="32" fill="#FAF6F0" stroke="#475A4B" stroke-width="5"/>
+  <circle cx="560" cy="264" r="12" fill="#B4705A"/>
+  <path d="M522 410h76l-11 68a18 18 0 0 1-18 15h-18a18 18 0 0 1-18-15Z" fill="#334437"/>
+
+  <g opacity=".55">
+    <path d="M356 402h88l-6 20h-76Z" fill="#475A4B"/>
+    <path d="M372 402c0-28 12-44 28-44s28 16 28 44" fill="none" stroke="#475A4B" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="400" cy="336" r="14" fill="#B4705A"/>
+  </g>
+</svg>

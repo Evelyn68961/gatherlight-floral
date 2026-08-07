@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="工作室日常(佔位示意圖)">
+  <rect width="800" height="600" fill="#E8EDE7"/>
+  <rect x="0" y="430" width="800" height="170" fill="#DCE3DA"/>
+
+  <g stroke="#475A4B" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M250 430C250 350 226 296 186 254"/>
+    <path d="M250 430C250 362 282 306 330 268"/>
+    <path d="M250 430C250 370 250 310 250 208"/>
+  </g>
+  <g fill="#7C8F72">
+    <path d="M222 358c-38-6-60-26-64-58 36-4 60 14 64 58Z"/>
+    <path d="M282 336c36-8 56-30 58-62-36 2-56 22-58 62Z"/>
+  </g>
+  <circle cx="186" cy="254" r="36" fill="#B4705A"/>
+  <circle cx="186" cy="254" r="14" fill="#F3E3DC"/>
+  <circle cx="330" cy="268" r="30" fill="#C99A83"/>
+  <circle cx="250" cy="208" r="42" fill="#FAF6F0" stroke="#475A4B" stroke-width="4"/>
+  <circle cx="250" cy="208" r="15" fill="#B4705A"/>
+  <path d="M200 430h100l-14 116a24 24 0 0 1-24 22h-24a24 24 0 0 1-24-22Z" fill="#475A4B"/>
+
+  <rect x="452" y="286" width="256" height="144" rx="10" fill="#FAF6F0"/>
+  <rect x="484" y="322" width="150" height="9" rx="4.5" fill="#C9CFC4"/>
+  <rect x="484" y="350" width="192" height="9" rx="4.5" fill="#C9CFC4"/>
+  <rect x="484" y="378" width="112" height="9" rx="4.5" fill="#E0C4B8"/>
+
+  <g stroke="#475A4B" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M560 286c0-40 20-64 56-72"/>
+    <path d="M560 286c0-30-14-50-40-58"/>
+  </g>
+  <circle cx="616" cy="214" r="24" fill="#B4705A" opacity=".7"/>
+  <circle cx="520" cy="228" r="18" fill="#7C8F72" opacity=".7"/>
+
+  <path d="M0 430h800" stroke="#475A4B" stroke-width="3" opacity=".25"/>
+</svg>

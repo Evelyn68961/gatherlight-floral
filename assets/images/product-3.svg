@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="桌上盆花(佔位示意圖)">
+  <rect width="500" height="500" fill="#FAF6F0"/>
+  <rect x="0" y="366" width="500" height="134" fill="#F3E3DC"/>
+  <circle cx="250" cy="216" r="120" fill="#F3E3DC" opacity=".5"/>
+  <g stroke="#475A4B" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M250 366V196"/><path d="M250 340 176 254"/><path d="M250 336 326 258"/>
+    <path d="M250 348 150 316"/><path d="M250 348 350 320"/>
+  </g>
+  <g fill="#7C8F72">
+    <path d="M226 316c-36-8-56-28-58-58 34 0 56 20 58 58Z"/>
+    <path d="M276 306c34-10 54-30 54-60-34 2-54 22-54 60Z"/>
+  </g>
+  <circle cx="176" cy="254" r="32" fill="#B4705A"/><circle cx="176" cy="254" r="12" fill="#F3E3DC"/>
+  <circle cx="326" cy="258" r="28" fill="#7C8F72"/><circle cx="326" cy="258" r="10" fill="#E8EDE7"/>
+  <circle cx="250" cy="196" r="34" fill="#C99A83"/><circle cx="250" cy="196" r="12" fill="#FAF6F0"/>
+  <circle cx="150" cy="316" r="18" fill="#E8EDE7" stroke="#475A4B" stroke-width="4"/>
+  <circle cx="350" cy="320" r="16" fill="#B4705A" opacity=".5"/>
+  <path d="M180 366h140l-14 76a24 24 0 0 1-24 20h-64a24 24 0 0 1-24-20Z" fill="#B4705A"/>
+  <path d="M180 366h140l-4 26H184Z" fill="#9A5C48"/>
+</svg>
