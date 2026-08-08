@@ -455,6 +455,81 @@
 .course-item__seat.is-full { color: var(--c-clay); }
 .course__media img { width: 100%; border-radius: var(--r-image); }
 
+/* --------------------------------------------------------- Rating + stars */
+/* Grey stars with a clay copy clipped over the top, so a 4.9 average renders
+   as 4.9 rather than rounding up to five filled stars. The trailing
+   letter-spacing is cancelled with a negative margin — otherwise the fill
+   percentage measures against a box 2px wider than the glyphs. */
+.stars {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  color: var(--c-line);
+  white-space: nowrap;
+}
+.stars__fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--c-clay);
+}
+
+.rating-summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s-12);
+  align-items: center;
+  max-width: 680px;
+  margin: 0 auto var(--s-12);
+  padding: var(--s-8);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-card);
+}
+.rating-summary__score { text-align: center; }
+.rating-summary__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  line-height: 1;
+  color: var(--c-moss);
+}
+.rating-summary__score .stars { margin-top: var(--s-2); }
+.rating-summary__count {
+  margin-top: var(--s-2);
+  font-size: var(--fs-caption);
+  color: var(--c-ink-muted);
+}
+.rating-bars { display: grid; gap: var(--s-2); }
+.rating-bar {
+  display: grid;
+  grid-template-columns: 3.6em 1fr 3.2em;
+  gap: var(--s-3);
+  align-items: center;
+  font-size: var(--fs-caption);
+  color: var(--c-ink-muted);
+}
+.rating-bar__track {
+  height: 8px;
+  background: var(--c-moss-soft);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+.rating-bar__fill {
+  display: block;
+  height: 100%;
+  background: var(--c-clay);
+  border-radius: var(--r-pill);
+}
+.rating-bar__n { text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 700px) {
+  .rating-summary { grid-template-columns: 1fr; gap: var(--s-6); }
+}
+
 /* ----------------------------------------------------------- Testimonials */
 .quote {
   display: flex;
@@ -469,12 +544,20 @@
   font-size: var(--fs-body-lg);
   line-height: 1.85;
 }
-.quote::before {
-  content: "";
-  display: block;
-  width: 28px; height: 2px;
+/* The stars replace what used to be a purely decorative rule above the quote:
+   same visual job at the top of the card, but it now carries information. */
+.quote__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
   margin-bottom: var(--s-6);
-  background: var(--c-clay);
+}
+.quote__stars { color: var(--c-clay); letter-spacing: 2px; }
+.quote__date {
+  font-size: var(--fs-caption);
+  color: var(--c-ink-muted);
+  font-variant-numeric: tabular-nums;
 }
 .quote footer {
   margin-top: var(--s-6);
@@ -984,6 +1067,52 @@
   font-weight: 600;
 }
 .filter-row .chips { margin-bottom: 0; }
+
+/* ---- Delivery date + sort (injected by scripts/delivery.js) ---- */
+.deliv {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.deliv__date,
+.deliv__sort {
+  padding: var(--s-2) var(--s-3);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  color: var(--c-ink);
+  font: inherit;
+  font-size: var(--fs-caption);
+}
+.deliv__date:hover,
+.deliv__sort:hover { border-color: var(--c-moss); }
+.deliv__date:focus-visible,
+.deliv__sort:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+.deliv__clear {
+  color: var(--c-ink-muted);
+  font-size: var(--fs-caption);
+  text-decoration: underline;
+}
+.deliv__clear:hover { color: var(--c-clay); }
+.deliv__clear[hidden] { display: none; }
+/* Pushed onto its own line so the note reads as a footnote to the controls
+   rather than another control. */
+.deliv__note {
+  flex-basis: 100%;
+  color: var(--c-ink-muted);
+  font-size: var(--fs-caption);
+}
+
+/* The earliest-arrival line under each price. */
+.product__eta {
+  margin-top: var(--s-1);
+  color: var(--c-moss);
+  font-size: var(--fs-caption);
+}
 
 @media (max-width: 560px) {
   .filter-row { flex-direction: column; gap: var(--s-2); }

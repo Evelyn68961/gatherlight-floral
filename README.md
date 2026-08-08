@@ -56,6 +56,15 @@ and the awkward questions answered up front.
 - **Occasion + type filtering** — two independent dimensions ANDed together, occasion
   first, because that is how flowers are actually bought. Products carry several
   occasions, so matching is a membership test rather than equality.
+- **Delivery-date filter and 最快可送達 sort** — for flowers *when* matters as much as
+  *what*. Every product shows its earliest arrival date, computed from two rules the
+  page already states elsewhere: the studio is shut Sunday and Monday (per its own
+  opening hours) and same-day orders stop at 15:00. Pick a date and anything that can't
+  make it drops out; pick a Sunday and the empty state says why.
+- **Reviews that match their own markup** — 4.9 / 186 with a star distribution that sums
+  to the stated count and averages to the stated score, and the same figures in the
+  `Florist` `aggregateRating`. A rating in markup that a visitor can't see on the page
+  is a structured-data policy violation, not a shortcut.
 - **Structured data** — `Florist` with `makesOffer`, `Service` with an
   `OfferCatalog`, and opening hours as JSON-LD. No competitor site reviewed has any.
 - **LINE as a first-class channel** — persistent CTA plus an inline button in the
@@ -85,6 +94,7 @@ scripts/
   main.js             nav, smooth scroll + scrollspy, product filter, reveal, form
   services.js         service data (single source of truth) + detail rendering
   quickview.js        product quick-view modal
+  delivery.js         earliest-arrival dates, date filter, 最快可送達 sort
 assets/               placeholder SVG illustrations & icons
 ```
 

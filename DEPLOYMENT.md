@@ -87,7 +87,7 @@ npx serve .
 - Chrome / Edge（最新版）
 - Firefox（最新版）
 - Safari（最新版，含 iOS）
-- 斷點:375（手機）、768（平板）、1440（桌機）
+- 斷點：375（手機）、768（平板）、1440（桌機）
 
 網站使用 `IntersectionObserver` 與 CSS `aspect-ratio`,不支援 Internet Explorer。
 如需支援 IE,請另行告知評估。

@@ -86,13 +86,19 @@
   }
 
   /* --------------------------------------------------- 3. Product filter */
-  /* Two independent dimensions, ANDed together:
+  /* Three independent dimensions, ANDed together:
        occasion — why you're buying (生日 / 探病 / 開幕…)
        category — what the thing is (花束 / 盆花 / 乾燥花…)
+       delivery — whether it can arrive by the date you picked
      Occasion comes first deliberately. People shop for flowers by the reason,
      not the format — nobody wakes up wanting "a 盆花", they want something for
      a friend in hospital. A product carries several occasions, so the match is
      a membership test rather than equality.
+
+     The delivery dimension is owned by scripts/delivery.js, which writes
+     data-deliverable onto each card and then fires gl:delivery-change. Only
+     this function ever touches `hidden`, so there is exactly one owner of
+     visibility no matter how many dimensions get added later.
 
      Filtering is additive: with the script removed the full grid still renders,
      so the page degrades to a plain list rather than breaking. */
@@ -112,12 +118,16 @@
         var catOk = state.category === 'all' || p.dataset.category === state.category;
         var occs = (p.dataset.occasion || '').split(' ');
         var occOk = state.occasion === 'all' || occs.indexOf(state.occasion) !== -1;
-        var match = catOk && occOk;
+        // Absent attribute means no date has been picked yet — show everything.
+        var dateOk = p.dataset.deliverable !== '0';
+        var match = catOk && occOk && dateOk;
         p.hidden = !match;
         if (match) shown++;
       });
       if (empty) empty.hidden = shown > 0;
     }
+
+    grid.addEventListener('gl:delivery-change', apply);
 
     function wire(box, key, attr) {
       if (!box) return;

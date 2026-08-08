@@ -49,8 +49,33 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "186"
-  }
+    "reviewCount": "186",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "林小姐" },
+      "datePublished": "2026-05-11",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "婚禮那天走進場地，看到主桌的花我就哭了。事前來回討論很多次，但他們一直很有耐心。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "陳先生" },
+      "datePublished": "2026-04-23",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "店裡每週換花之後，客人拍照的比例明顯變高。配色會跟著我們的季節菜單走，很細心。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "黃小姐" },
+      "datePublished": "2026-03-30",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "花本身沒話說，但母親節前一週的訂單晚了半天才到，客服有先打電話說明。平常日就沒遇過這種狀況。"
+    }
+  ]
 }
 </script>
 </head>
@@ -290,7 +315,7 @@
     </div>
 
     <div class="grid grid--products" id="productGrid" aria-live="polite">
-      <article class="product reveal" data-id="spring-bouquet" data-occasion="birthday opening" data-category="bouquet">
+      <article class="product reveal" data-id="spring-bouquet" data-lead="0" data-occasion="birthday opening" data-category="bouquet">
         <div class="product__media">
           <img src="assets/images/product-1.svg" alt="春日暖陽花束" width="500" height="500" loading="lazy">
           <span class="badge">本週推薦</span>
@@ -301,7 +326,7 @@
         <p class="product__price">NT$1,280</p>
       </article>
 
-      <article class="product reveal" data-id="white-green-bouquet" data-occasion="visit farewell opening" data-category="bouquet">
+      <article class="product reveal" data-id="white-green-bouquet" data-lead="1" data-occasion="visit farewell opening" data-category="bouquet">
         <div class="product__media">
           <img src="assets/images/product-2.svg" alt="白綠系手綁花束" width="500" height="500" loading="lazy">
         </div>
@@ -311,7 +336,7 @@
         <p class="product__price">NT$1,580</p>
       </article>
 
-      <article class="product reveal" data-id="table-arrangement" data-occasion="self birthday" data-category="potted">
+      <article class="product reveal" data-id="table-arrangement" data-lead="0" data-occasion="self birthday" data-category="potted">
         <div class="product__media">
           <img src="assets/images/product-3.svg" alt="桌上盆花・小" width="500" height="500" loading="lazy">
         </div>
@@ -321,7 +346,7 @@
         <p class="product__price">NT$980</p>
       </article>
 
-      <article class="product reveal" data-id="potted-greens" data-occasion="opening self" data-category="potted">
+      <article class="product reveal" data-id="potted-greens" data-lead="2" data-occasion="opening self" data-category="potted">
         <div class="product__media">
           <img src="assets/images/product-4.svg" alt="陶盆常綠組合" width="500" height="500" loading="lazy">
         </div>
@@ -331,7 +356,7 @@
         <p class="product__price">NT$1,680</p>
       </article>
 
-      <article class="product reveal" data-id="dried-bouquet" data-occasion="self birthday" data-category="dried">
+      <article class="product reveal" data-id="dried-bouquet" data-lead="0" data-occasion="self birthday" data-category="dried">
         <div class="product__media">
           <img src="assets/images/product-5.svg" alt="乾燥花束・暖棕" width="500" height="500" loading="lazy">
         </div>
@@ -341,7 +366,7 @@
         <p class="product__price">NT$860</p>
       </article>
 
-      <article class="product reveal" data-id="subscription" data-occasion="self" data-category="subscription">
+      <article class="product reveal" data-id="subscription" data-lead="sub" data-occasion="self" data-category="subscription">
         <div class="product__media">
           <img src="assets/images/product-6.svg" alt="每週訂閱配花" width="500" height="500" loading="lazy">
         </div>
@@ -429,18 +454,54 @@
     <div class="section__head section__head--center reveal">
       <span class="eyebrow">Voices</span>
       <h2 id="voices-title">客人怎麼說</h2>
+      <p>整合自 Google 商家評論，只收錄實際下過單的客人。</p>
     </div>
+
+    <!-- These figures and the Florist JSON-LD's aggregateRating are the same
+         data: 172+10+3+1 = 186 reviews, weighted mean 911/186 = 4.90. A rating
+         in the markup that a visitor can't see on the page is a policy
+         violation, so the two move together or not at all. -->
+    <div class="rating-summary reveal">
+      <div class="rating-summary__score">
+        <strong class="rating-summary__num">4.9</strong>
+        <div class="stars" role="img" aria-label="平均 4.9 顆星，滿分 5 顆星">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="stars__fill" style="width:98%" aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="rating-summary__count">186 則評論</p>
+      </div>
+      <div class="rating-bars">
+        <div class="rating-bar"><span>5 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:92.5%"></span></span><span class="rating-bar__n">172</span></div>
+        <div class="rating-bar"><span>4 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:5.4%"></span></span><span class="rating-bar__n">10</span></div>
+        <div class="rating-bar"><span>3 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:1.6%"></span></span><span class="rating-bar__n">3</span></div>
+        <div class="rating-bar"><span>2 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:.5%"></span></span><span class="rating-bar__n">1</span></div>
+        <div class="rating-bar"><span>1 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:0"></span></span><span class="rating-bar__n">0</span></div>
+      </div>
+    </div>
+
     <div class="grid grid--3">
       <blockquote class="quote reveal">
+        <div class="quote__head">
+          <span class="quote__stars" role="img" aria-label="五顆星">★★★★★</span>
+          <span class="quote__date">2026-05-11</span>
+        </div>
         <p>「婚禮那天走進場地，看到主桌的花我就哭了。事前來回討論很多次，但他們一直很有耐心。」</p>
-        <footer><cite>林小姐</cite>2025 春季婚禮</footer>
+        <footer><cite>林小姐</cite>2026 春季婚禮</footer>
       </blockquote>
       <blockquote class="quote reveal">
+        <div class="quote__head">
+          <span class="quote__stars" role="img" aria-label="五顆星">★★★★★</span>
+          <span class="quote__date">2026-04-23</span>
+        </div>
         <p>「店裡每週換花之後，客人拍照的比例明顯變高。配色會跟著我們的季節菜單走，很細心。」</p>
         <footer><cite>陳先生</cite>咖啡廳店主</footer>
       </blockquote>
       <blockquote class="quote reveal">
-        <p>「幫公司訂了半年的會客室配花，行政流程單純，對帳也很清楚，續約沒有懸念。」</p>
+        <div class="quote__head">
+          <span class="quote__stars" role="img" aria-label="四顆星">★★★★☆</span>
+          <span class="quote__date">2026-03-30</span>
+        </div>
+        <p>「花本身沒話說，但母親節前一週的訂單晚了半天才到，客服有先打電話說明。平常日就沒遇過這種狀況。」</p>
         <footer><cite>黃小姐</cite>企業行政</footer>
       </blockquote>
     </div>
@@ -499,7 +560,7 @@
         <div class="field">
           <label for="message">需求說明 <span class="req" aria-hidden="true">*</span></label>
           <textarea id="message" name="message" required aria-describedby="message-error"
-                    placeholder="例如:9/20 送給同事的生日花束，喜歡淺色系，預算 1,500 左右。"></textarea>
+                    placeholder="例如：9/20 送給同事的生日花束，喜歡淺色系，預算 1,500 左右。"></textarea>
           <span class="field__error" id="message-error"></span>
         </div>
 
@@ -626,5 +687,6 @@
 
 <script src="scripts/main.js"></script>
 <script src="scripts/quickview.js"></script>
+<script src="scripts/delivery.js"></script>
 </body>
 </html>
