@@ -86,35 +86,65 @@
   }
 
   /* --------------------------------------------------- 3. Product filter */
-  /* Filtering is additive: with the script removed the full product grid
-     still renders, so the page degrades to a plain list rather than breaking. */
+  /* Two independent dimensions, ANDed together:
+       occasion — why you're buying (生日 / 探病 / 開幕…)
+       category — what the thing is (花束 / 盆花 / 乾燥花…)
+     Occasion comes first deliberately. People shop for flowers by the reason,
+     not the format — nobody wakes up wanting "a 盆花", they want something for
+     a friend in hospital. A product carries several occasions, so the match is
+     a membership test rather than equality.
+
+     Filtering is additive: with the script removed the full grid still renders,
+     so the page degrades to a plain list rather than breaking. */
   function initFilter() {
-    var chipBox = document.getElementById('filterChips');
+    var catBox = document.getElementById('filterChips');
+    var occBox = document.getElementById('occasionChips');
     var grid = document.getElementById('productGrid');
     var empty = document.getElementById('emptyState');
-    if (!chipBox || !grid) return;
+    if (!catBox || !grid) return;
 
-    var chips = Array.prototype.slice.call(chipBox.querySelectorAll('.chip'));
     var products = Array.prototype.slice.call(grid.querySelectorAll('.product'));
+    var state = { category: 'all', occasion: 'all' };
 
-    chipBox.addEventListener('click', function (e) {
-      var chip = e.target.closest('.chip');
-      if (!chip) return;
-
-      var filter = chip.dataset.filter;
-      chips.forEach(function (c) {
-        c.setAttribute('aria-pressed', String(c === chip));
-      });
-
+    function apply() {
       var shown = 0;
       products.forEach(function (p) {
-        var match = filter === 'all' || p.dataset.category === filter;
+        var catOk = state.category === 'all' || p.dataset.category === state.category;
+        var occs = (p.dataset.occasion || '').split(' ');
+        var occOk = state.occasion === 'all' || occs.indexOf(state.occasion) !== -1;
+        var match = catOk && occOk;
         p.hidden = !match;
         if (match) shown++;
       });
-
       if (empty) empty.hidden = shown > 0;
-    });
+    }
+
+    function wire(box, key, attr) {
+      if (!box) return;
+      var chips = Array.prototype.slice.call(box.querySelectorAll('.chip'));
+      box.addEventListener('click', function (e) {
+        var chip = e.target.closest('.chip');
+        if (!chip) return;
+        state[key] = chip.dataset[attr];
+        chips.forEach(function (c) {
+          c.setAttribute('aria-pressed', String(c === chip));
+        });
+        apply();
+      });
+    }
+
+    wire(catBox, 'category', 'filter');
+    wire(occBox, 'occasion', 'occasion');
+
+    /* The quick-find band's 「我想送禮」 deep-links here with an occasion. */
+    var hash = window.location.hash;
+    if (hash.indexOf('#products') === 0 && hash.indexOf('=') > -1) {
+      var want = hash.split('=')[1];
+      var target = occBox && occBox.querySelector('.chip[data-occasion="' + want + '"]');
+      if (target) target.click();
+    }
+
+    apply();
   }
 
   /* ------------------------------------------------------ 4. Reveal on scroll */

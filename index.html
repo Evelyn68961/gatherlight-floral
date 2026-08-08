@@ -18,6 +18,41 @@
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/layout.css">
 <link rel="stylesheet" href="styles/components.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Florist",
+  "name": "拾光花室",
+  "alternateName": "Gather Light Floral Studio",
+  "url": "https://gatherlight-floral.vercel.app/",
+  "telephone": "+886-2-2700-0000",
+  "email": "hello@gatherlight.example",
+  "priceRange": "NT$860–NT$68,000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "民生東路五段 000 巷 00 號 1 樓",
+    "addressLocality": "松山區",
+    "addressRegion": "台北市",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "11:00",
+    "closes": "19:00"
+  }],
+  "makesOffer": [
+    { "@type": "Offer", "name": "日常花禮", "priceCurrency": "TWD", "price": "880", "url": "https://gatherlight-floral.vercel.app/service.html?s=1" },
+    { "@type": "Offer", "name": "婚禮與活動佈置", "priceCurrency": "TWD", "price": "18000", "url": "https://gatherlight-floral.vercel.app/service.html?s=2" },
+    { "@type": "Offer", "name": "空間長期配花", "priceCurrency": "TWD", "price": "2400", "url": "https://gatherlight-floral.vercel.app/service.html?s=3" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "186"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -78,7 +113,7 @@
   <div class="container">
     <h2 id="quickfind-title" class="sr-only">快速找到適合的服務與商品</h2>
     <div class="quickfind reveal">
-      <a class="quickfind__item" href="#products">
+      <a class="quickfind__item" href="#products?occasion=birthday">
         <span class="quickfind__icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg>
         </span>
@@ -231,16 +266,31 @@
       <p>以下為常態品項，實際花材依當季供應調整。想要特定色系或預算，歡迎直接與我們說。</p>
     </div>
 
-    <div class="chips reveal" role="group" aria-label="商品分類篩選" id="filterChips">
+    <div class="filter-row reveal">
+      <span class="filter-row__label">送禮場合</span>
+      <div class="chips" role="group" aria-label="場合篩選" id="occasionChips">
+        <button class="chip" type="button" data-occasion="all" aria-pressed="true">不限</button>
+        <button class="chip" type="button" data-occasion="birthday" aria-pressed="false">生日祝賀</button>
+        <button class="chip" type="button" data-occasion="visit" aria-pressed="false">探病慰問</button>
+        <button class="chip" type="button" data-occasion="opening" aria-pressed="false">開幕喬遷</button>
+        <button class="chip" type="button" data-occasion="farewell" aria-pressed="false">告別追思</button>
+        <button class="chip" type="button" data-occasion="self" aria-pressed="false">自用佈置</button>
+      </div>
+    </div>
+
+    <div class="filter-row reveal">
+      <span class="filter-row__label">商品類型</span>
+      <div class="chips" role="group" aria-label="商品分類篩選" id="filterChips">
       <button class="chip" type="button" data-filter="all" aria-pressed="true">全部</button>
       <button class="chip" type="button" data-filter="bouquet" aria-pressed="false">花束</button>
       <button class="chip" type="button" data-filter="potted" aria-pressed="false">盆花</button>
       <button class="chip" type="button" data-filter="dried" aria-pressed="false">乾燥花</button>
       <button class="chip" type="button" data-filter="subscription" aria-pressed="false">訂閱配花</button>
+      </div>
     </div>
 
     <div class="grid grid--products" id="productGrid" aria-live="polite">
-      <article class="product reveal" data-id="spring-bouquet" data-category="bouquet">
+      <article class="product reveal" data-id="spring-bouquet" data-occasion="birthday opening" data-category="bouquet">
         <div class="product__media">
           <img src="assets/images/product-1.svg" alt="春日暖陽花束" width="500" height="500" loading="lazy">
           <span class="badge">本週推薦</span>
@@ -251,7 +301,7 @@
         <p class="product__price">NT$1,280</p>
       </article>
 
-      <article class="product reveal" data-id="white-green-bouquet" data-category="bouquet">
+      <article class="product reveal" data-id="white-green-bouquet" data-occasion="visit farewell opening" data-category="bouquet">
         <div class="product__media">
           <img src="assets/images/product-2.svg" alt="白綠系手綁花束" width="500" height="500" loading="lazy">
         </div>
@@ -261,7 +311,7 @@
         <p class="product__price">NT$1,580</p>
       </article>
 
-      <article class="product reveal" data-id="table-arrangement" data-category="potted">
+      <article class="product reveal" data-id="table-arrangement" data-occasion="self birthday" data-category="potted">
         <div class="product__media">
           <img src="assets/images/product-3.svg" alt="桌上盆花・小" width="500" height="500" loading="lazy">
         </div>
@@ -271,7 +321,7 @@
         <p class="product__price">NT$980</p>
       </article>
 
-      <article class="product reveal" data-id="potted-greens" data-category="potted">
+      <article class="product reveal" data-id="potted-greens" data-occasion="opening self" data-category="potted">
         <div class="product__media">
           <img src="assets/images/product-4.svg" alt="陶盆常綠組合" width="500" height="500" loading="lazy">
         </div>
@@ -281,7 +331,7 @@
         <p class="product__price">NT$1,680</p>
       </article>
 
-      <article class="product reveal" data-id="dried-bouquet" data-category="dried">
+      <article class="product reveal" data-id="dried-bouquet" data-occasion="self birthday" data-category="dried">
         <div class="product__media">
           <img src="assets/images/product-5.svg" alt="乾燥花束・暖棕" width="500" height="500" loading="lazy">
         </div>
@@ -291,7 +341,7 @@
         <p class="product__price">NT$860</p>
       </article>
 
-      <article class="product reveal" data-id="subscription" data-category="subscription">
+      <article class="product reveal" data-id="subscription" data-occasion="self" data-category="subscription">
         <div class="product__media">
           <img src="assets/images/product-6.svg" alt="每週訂閱配花" width="500" height="500" loading="lazy">
         </div>
@@ -480,14 +530,22 @@
             <span>週日、週一公休</span>
           </dd>
         </dl>
-        <div class="social">
+        <p style="margin-top:var(--s-6)">
+            <a class="line-inline" href="https://line.me/R/ti/p/@gatherlight" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 10.2c0-4-4-7.3-9-7.3S3 6.2 3 10.2c0 3.6 3.2 6.6 7.4 7.2.3.06.7.2.8.45.1.23.07.6.03.83l-.13.77c-.04.23-.18.9.8.49s5.3-3.1 7.2-5.34C20.5 13.1 21 11.7 21 10.2Z"/></svg>
+              用 LINE 直接詢問
+            </a>
+          </p>
+          <p class="small muted" style="margin-top:var(--s-2)">急件或想先聊聊，LINE 通常回得比表單快。</p>
+
+          <div class="social">
           <a href="#" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
           <a href="#" aria-label="Facebook">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h-3a4 4 0 0 0-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="LINE">
+          <a href="https://line.me/R/ti/p/@gatherlight" target="_blank" rel="noopener" aria-label="LINE 官方帳號">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 10.5c0-4.1-4-7.5-9-7.5s-9 3.4-9 7.5c0 3.7 3.2 6.8 7.5 7.4.3.1.7.2.8.5.1.3.1.7 0 1l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.4-5.5c1.3-1.4 1.6-2.9 1.6-4.7Z"/></svg>
           </a>
         </div>
@@ -564,6 +622,8 @@
     </div>
   </div>
 </div>
+<a class="line-fab" href="https://line.me/R/ti/p/@gatherlight" target="_blank" rel="noopener" aria-label="用 LINE 詢問"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 10.2c0-4-4-7.3-9-7.3S3 6.2 3 10.2c0 3.6 3.2 6.6 7.4 7.2.3.06.7.2.8.45.1.23.07.6.03.83l-.13.77c-.04.23-.18.9.8.49s5.3-3.1 7.2-5.34C20.5 13.1 21 11.7 21 10.2ZM8.2 12.4H6.4a.38.38 0 0 1-.38-.38V8.4c0-.2.17-.38.38-.38.2 0 .37.17.37.38v3.25H8.2c.2 0 .37.17.37.38s-.16.37-.37.37Zm1.5-.38a.38.38 0 0 1-.38.38.38.38 0 0 1-.37-.38V8.4c0-.2.17-.38.37-.38.2 0 .38.17.38.38Zm4.34 0a.38.38 0 0 1-.26.36.4.4 0 0 1-.12.02.37.37 0 0 1-.3-.15L11.55 9.7v2.32a.38.38 0 0 1-.37.38.38.38 0 0 1-.38-.38V8.4a.38.38 0 0 1 .26-.36.4.4 0 0 1 .12-.02c.11 0 .22.05.29.15l1.87 2.53V8.4c0-.2.17-.38.37-.38.21 0 .38.17.38.38Zm2.92-2.18a.38.38 0 0 1-.38.37h-1.44v.7h1.44a.38.38 0 0 1 0 .75h-1.44v.7h1.44a.38.38 0 0 1 0 .75h-1.81a.38.38 0 0 1-.38-.38V8.4c0-.2.17-.38.38-.38h1.81c.21 0 .38.17.38.38Z"/></svg><span>LINE 詢問</span></a>
+
 <script src="scripts/main.js"></script>
 <script src="scripts/quickview.js"></script>
 </body>

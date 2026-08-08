@@ -11,10 +11,25 @@ Open `index.html` and it runs.
 > **Note:** This is a portfolio demo. The studio, services, products, prices and
 > testimonials are all fictional placeholder content.
 
-## The problem this site solves
+## Why this exists
 
-A small florist gets two completely different kinds of visitor, and a single page has
-to serve both without annoying either:
+I read four real florist sites before designing this one. Taipei studios like
+[PM FLOWERS](https://www.pm-flowers.com/) publish **no prices at all** and take enquiries
+only by direct contact; [植香藝室](https://www.y-flora.com/) has no enquiry form on the
+site whatsoever. The strongest local example, [花意空間](https://www.flowerpc.com.tw/),
+prices its products but not its services, and filters by product type only.
+
+Meanwhile [Bloom & Wild](https://www.bloomandwild.com/) navigates by *occasion* —
+Birthdays, Sympathy, Anniversary, Gifts under £30 — because nobody wakes up wanting
+"a potted arrangement". They want something for a friend in hospital.
+
+So this demo publishes three price tiers for every service, and filters products by
+**occasion first, product type second**.
+
+## Two kinds of visitor
+
+A small florist gets two completely different kinds of visitor, and one page has to
+serve both without annoying either:
 
 - Someone who **knows what they want** — "a bouquet, today, about NT$1,500" — and needs
   to get to a price fast.
@@ -38,6 +53,13 @@ and the awkward questions answered up front.
   disagree about a price. Scrim, Esc and focus return all wired.
 - **Category filtering** — chips filter the product grid with a real empty state; the
   grid is static HTML, so it degrades to a plain list without JS.
+- **Occasion + type filtering** — two independent dimensions ANDed together, occasion
+  first, because that is how flowers are actually bought. Products carry several
+  occasions, so matching is a membership test rather than equality.
+- **Structured data** — `Florist` with `makesOffer`, `Service` with an
+  `OfferCatalog`, and opening hours as JSON-LD. No competitor site reviewed has any.
+- **LINE as a first-class channel** — persistent CTA plus an inline button in the
+  contact block, because that is where Taiwanese enquiries actually arrive.
 - **Token-first CSS** — every colour, type step, spacing unit and radius lives in
   `styles/tokens.css` as custom properties; the whole site re-themes from one file.
 - **Fully responsive** — 375 / 768 / 1440, hamburger nav, reflowing grids, and a
