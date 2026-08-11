@@ -238,20 +238,26 @@ var PRODUCTS = {
      trackpad, so the modal sits still while the whole site slides around
      underneath it.
 
-     `overflow: hidden` on <html> rather than `position: fixed` on <body>:
-     the header is `position: sticky`, and taking body out of flow drops it
-     back to its natural — already scrolled past — position, which reads as
-     the header jumping. Hiding the scrollbar also widens the viewport, so
-     the width it gave up is handed to body as padding; without that the
-     entire layout shifts sideways the moment the modal opens. */
+     `overflow: hidden` on <body> — not `position: fixed`, and not on <html>.
+     Both of those break the sticky header: taking body out of flow drops the
+     header back to its natural, already scrolled past, position, and setting
+     overflow on the root propagates it to the viewport, which stops the root
+     being the scrollport `position: sticky` resolves against. Measured in
+     Chrome at scrollY 600, html{overflow:hidden} put the header's viewport
+     top at -600 — un-stuck — while body{overflow:hidden} left it at 0 and
+     blocked real wheel input just as effectively.
+
+     Hiding the scrollbar also widens the viewport, so the width it gave up is
+     handed to body as padding; without that the entire layout shifts sideways
+     the moment the modal opens. */
   function lockScroll() {
     var bar = window.innerWidth - document.documentElement.clientWidth;
-    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
     if (bar > 0) document.body.style.paddingRight = bar + 'px';
   }
 
   function unlockScroll() {
-    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
     document.body.style.paddingRight = '';
   }
 

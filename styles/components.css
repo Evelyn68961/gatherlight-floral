@@ -123,15 +123,23 @@
   border-radius: 8px;
 }
 .nav-toggle:hover { background: var(--c-moss-soft); }
-.nav-toggle span {
+
+/* `:not(.sr-only)` matters: the button also holds a screen-reader label span,
+   and `.nav-toggle span` (0,1,1) outweighs `.sr-only` (0,1,0). Unscoped, these
+   rules overrode the label's `position: absolute` to `relative` — and `clip`
+   only applies to absolutely positioned boxes, so the clip meant to hide it
+   became inert and the label was painted as a fourth bar sitting beside the
+   icon. Scoping keeps the visual burger to the one span that is decoration. */
+.nav-toggle > span:not(.sr-only) {
   position: relative;
   display: block;
+  flex: none;
   width: 20px; height: 1.5px;
   background: var(--c-ink);
   transition: background var(--t-fast);
 }
-.nav-toggle span::before,
-.nav-toggle span::after {
+.nav-toggle > span:not(.sr-only)::before,
+.nav-toggle > span:not(.sr-only)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -139,12 +147,35 @@
   background: var(--c-ink);
   transition: transform var(--t-base);
 }
-.nav-toggle span::before { top: -6px; }
-.nav-toggle span::after  { top: 6px; }
+.nav-toggle > span:not(.sr-only)::before { top: -6px; }
+.nav-toggle > span:not(.sr-only)::after  { top: 6px; }
 
-.nav-toggle[aria-expanded="true"] span { background: transparent; }
-.nav-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] span::after  { transform: translateY(-6px) rotate(-45deg); }
+.nav-toggle[aria-expanded="true"] > span:not(.sr-only) { background: transparent; }
+.nav-toggle[aria-expanded="true"] > span:not(.sr-only)::before {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] > span:not(.sr-only)::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Injected by main.js, so it only exists where the panel can actually open.
+   z-index sits under the sticky header (50) and over everything else: the
+   panel is a child of the header, so it stays lit while the page dims.
+
+   Deliberately no `visibility` here — it is inherited, and under
+   prefers-reduced-motion the global 0.01ms transition would start one on
+   every descendant. opacity + pointer-events does the same job with nothing
+   to inherit. */
+.nav-scrim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(38, 34, 30, 0.38);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-base);
+}
 
 /* ------------------------------------------------------------------- Hero */
 .hero {
@@ -738,10 +769,20 @@
     background: var(--c-paper);
     border-top: 1px solid var(--c-line);
     box-shadow: var(--sh-header);
+    /* A phone in landscape is barely taller than the panel. Without a ceiling
+       the last links run off the bottom, and because the panel is anchored to
+       a sticky header the page cannot be scrolled to reach them. `contain`
+       stops the panel's own scroll from chaining to the page behind it. */
+    max-height: calc(100vh - var(--header-h));
+    max-height: calc(100dvh - var(--header-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
     /* Collapsed by default on mobile; JS toggles [data-open]. */
     display: none;
   }
   .nav[data-open="true"] { display: flex; }
+  .nav-scrim { display: block; }
+  .nav-scrim[data-open] { opacity: 1; pointer-events: auto; }
   .nav__list { flex-direction: column; gap: 0; }
   .nav__link {
     display: block;
@@ -1045,8 +1086,12 @@
   font-size: var(--fs-caption);
   font-weight: 600;
   box-shadow: 0 6px 20px rgba(6, 199, 85, .35);
-  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), opacity var(--t-fast);
 }
+/* The fab sits above the header, so it would float undimmed and still tappable
+   over the scrimmed page with the menu open — a live target on a surface that
+   is telling the visitor it is not interactive. */
+body[data-nav-open] .line-fab { opacity: 0; pointer-events: none; }
 .line-fab:hover {
   color: #fff;
   transform: translateY(-2px);

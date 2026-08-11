@@ -24,35 +24,118 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    var close = function () {
+    /* The scrim is injected rather than authored into the HTML: it does
+       nothing without the JS that opens the panel, so shipping it in static
+       markup would leave a dead overlay on the page for anyone with scripting
+       off. Same reasoning as the quick-view dialog's controls. */
+    var scrim = document.createElement('div');
+    scrim.className = 'nav-scrim';
+    document.body.appendChild(scrim);
+
+    /* Scroll lock on <body>, not on <html> and not `position: fixed`.
+       Overflow set on the root propagates to the viewport, which stops the
+       root being the scrollport `position: sticky` resolves against — measured
+       in Chrome: with html{overflow:hidden} at scrollY 600 the header's
+       viewport top went to -600, i.e. it stopped sticking and this panel, an
+       absolutely positioned child of it, rode off the top of the screen with
+       it. Set on <body> the same propagation blocks the scroll (verified with
+       real wheel input, not a synthetic event) while the root stays intact and
+       the header stays pinned. The scrollbar's width goes to body as padding
+       so the layout doesn't shift sideways as it disappears. */
+    var lockScroll = function () {
+      var bar = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      if (bar > 0) document.body.style.paddingRight = bar + 'px';
+    };
+
+    var unlockScroll = function () {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+
+    var isOpen = function () {
+      return toggle.getAttribute('aria-expanded') === 'true';
+    };
+
+    var open = function () {
+      lockScroll();
+      nav.setAttribute('data-open', 'true');
+      scrim.setAttribute('data-open', '');
+      document.body.setAttribute('data-nav-open', '');
+      toggle.setAttribute('aria-expanded', 'true');
+    };
+
+    var close = function (restoreFocus) {
+      /* Guarded, because unlockScroll() is not this function's to give away:
+         the quick-view dialog holds the same lock, and crossing the breakpoint
+         with that dialog open would otherwise release it underneath. */
+      if (!isOpen()) return;
       nav.removeAttribute('data-open');
+      scrim.removeAttribute('data-open');
+      document.body.removeAttribute('data-nav-open');
       toggle.setAttribute('aria-expanded', 'false');
+      unlockScroll();
+      /* preventScroll: the toggle lives in a sticky header, so it is on screen
+         already — but scroll-into-view resolves a sticky element against its
+         natural position in the document, which is the very top of the page.
+         Without this, closing with Escape throws the visitor back to the top. */
+      if (restoreFocus) toggle.focus({ preventScroll: true });
     };
 
     toggle.addEventListener('click', function () {
-      var open = toggle.getAttribute('aria-expanded') === 'true';
-      if (open) {
-        close();
-      } else {
-        nav.setAttribute('data-open', 'true');
-        toggle.setAttribute('aria-expanded', 'true');
-      }
+      if (isOpen()) close(false); else open();
     });
 
-    // Tapping a link inside the open mobile panel should close it.
+    scrim.addEventListener('click', function () { close(false); });
+
+    /* Tapping a link inside the open mobile panel should close it — and must
+       release the lock before the browser acts on the href, or an in-page
+       anchor lands on a document that cannot scroll. */
     nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) close();
+      if (e.target.closest('a')) close(false);
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-        close();
-        toggle.focus();
+      if (!isOpen()) return;
+
+      if (e.key === 'Escape') {
+        close(true);
+        return;
+      }
+
+      /* With the page dimmed and locked the panel is modal in effect, so Tab
+         has to stay inside it. The toggle is part of the cycle: it is the
+         close button while the panel is open. */
+      if (e.key !== 'Tab') return;
+      var f = [toggle].concat(
+        Array.prototype.slice.call(nav.querySelectorAll('a[href], button:not([disabled])'))
+      ).filter(function (el) { return el.offsetParent !== null; });
+      if (f.length < 2) return;
+
+      /* preventScroll throughout, for the same reason as the close path: every
+         one of these lives inside the sticky header, so scroll-into-view aims
+         at the top of the document rather than at where they are painted. The
+         scroll lock does not save us here — it stops the wheel and the finger,
+         not a programmatic scroll. */
+      var first = f[0];
+      var last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus({ preventScroll: true });
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus({ preventScroll: true });
       }
     });
 
-    // Leaving the mobile breakpoint must not strand the panel in a half state.
-    window.matchMedia('(min-width: 901px)').addEventListener('change', close);
+    /* Leaving the mobile breakpoint must not strand the panel in a half state —
+       and must release the lock, or a desktop-width window inherits a document
+       that cannot scroll. Wrapped rather than passed directly: `close` would
+       receive the MediaQueryListEvent as `restoreFocus` and yank focus to a
+       button that is now hidden. */
+    window.matchMedia('(min-width: 901px)').addEventListener('change', function () {
+      close(false);
+    });
   }
 
   /* ------------------------------------------------------- 2. Scroll spy */
