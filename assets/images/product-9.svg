@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="白百合致意花束（佔位示意圖）">
+<rect width="500" height="500" fill="#DDE5DC"/>
+<circle cx="250" cy="210" r="132" fill="#FFFFFF" opacity=".55"/>
+<g stroke="#334437" stroke-width="6" fill="none" stroke-linecap="round"><path d="M250 372V152"/><path d="M250 360 196 216"/><path d="M250 360 304 208"/><path d="M250 350 168 268"/><path d="M250 350 332 262"/></g>
+<g fill="#5F7360"><path d="M232 312c-34-8-52-28-54-56 32-2 52 16 54 56Z"/><path d="M270 302c32-10 50-30 50-56-32 4-50 22-50 56Z"/></g>
+<circle cx="196" cy="216" r="27" fill="#FFFFFF"/><circle cx="196" cy="216" r="9" fill="#FFFFFF" opacity=".8"/><circle cx="304" cy="208" r="24" fill="#E8EDE7"/><circle cx="304" cy="208" r="8" fill="#FFFFFF" opacity=".8"/><circle cx="168" cy="268" r="18" fill="#E8EDE7"/><circle cx="168" cy="268" r="6" fill="#FFFFFF" opacity=".8"/><circle cx="332" cy="262" r="16" fill="#FFFFFF"/><circle cx="332" cy="262" r="5" fill="#FFFFFF" opacity=".8"/>
+<g><circle cx="224" cy="174" r="19" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="224" cy="174" r="6" fill="#FFFFFF"/><circle cx="250" cy="152" r="23" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="250" cy="152" r="7" fill="#FFFFFF"/><circle cx="276" cy="176" r="18" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="276" cy="176" r="6" fill="#FFFFFF"/><circle cx="242" cy="196" r="15" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="242" cy="196" r="5" fill="#FFFFFF"/><circle cx="266" cy="200" r="13" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="266" cy="200" r="4" fill="#FFFFFF"/></g>
+<path d="M172 370h156l-44 98a22 22 0 0 1-20 13h-28a22 22 0 0 1-20-13Z" fill="#FFFFFF" stroke="#334437" stroke-width="5" stroke-linejoin="round"/>
+<path d="M210 416h80" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+</svg>

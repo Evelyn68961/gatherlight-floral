@@ -1,27 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="乾燥花束(佔位示意圖)">
-  <rect width="500" height="500" fill="#F3E3DC"/>
-  <circle cx="250" cy="206" r="126" fill="#EBD8CF" opacity=".7"/>
-  <g stroke="#9A5C48" stroke-width="5" fill="none" stroke-linecap="round">
-    <path d="M250 372V166"/><path d="M250 356 192 240"/><path d="M250 356 308 244"/>
-    <path d="M250 340 160 296"/><path d="M250 340 340 300"/>
-  </g>
-  <g fill="#C99A83">
-    <path d="M228 300c-34-8-54-28-56-58 32 0 54 20 56 58Z"/>
-    <path d="M274 290c32-10 50-30 50-60-32 2-50 22-50 60Z"/>
-  </g>
-  <g fill="#B4705A">
-    <ellipse cx="192" cy="238" rx="17" ry="30"/>
-    <ellipse cx="308" cy="242" rx="15" ry="27"/>
-    <ellipse cx="250" cy="164" rx="18" ry="34"/>
-  </g>
-  <g fill="#9A5C48" opacity=".65">
-    <ellipse cx="160" cy="294" rx="12" ry="21"/>
-    <ellipse cx="340" cy="298" rx="11" ry="19"/>
-  </g>
-  <g fill="#D8C0A8">
-    <circle cx="214" cy="204" r="9"/><circle cx="288" cy="208" r="8"/>
-    <circle cx="230" cy="272" r="7"/><circle cx="286" cy="266" r="7"/>
-  </g>
-  <path d="M188 372h124l-36 92a20 20 0 0 1-18 12h-16a20 20 0 0 1-18-12Z" fill="#EBD8CF" stroke="#9A5C48" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M218 414h64" stroke="#9A5C48" stroke-width="6" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="乾燥花束・暖棕（佔位示意圖）">
+<rect width="500" height="500" fill="#EFE6DA"/>
+<circle cx="250" cy="220" r="126" fill="#FAF6F0" opacity=".45"/>
+<g stroke="#5A503F" stroke-width="5" fill="none" stroke-linecap="round"><path d="M250 386 158 180"/><path d="M250 386 204 165"/><path d="M250 386 250 150"/><path d="M250 386 296 165"/><path d="M250 386 342 180"/></g>
+<ellipse cx="158" cy="202" rx="15" ry="34" fill="#D2BC93"/><ellipse cx="158" cy="194" rx="9" ry="20" fill="#FAF6F0" opacity=".55"/>
+<ellipse cx="204" cy="187" rx="15" ry="34" fill="#B99B6B"/><ellipse cx="204" cy="179" rx="9" ry="20" fill="#FAF6F0" opacity=".55"/>
+<ellipse cx="250" cy="172" rx="15" ry="34" fill="#D2BC93"/><ellipse cx="250" cy="164" rx="9" ry="20" fill="#FAF6F0" opacity=".55"/>
+<ellipse cx="296" cy="187" rx="15" ry="34" fill="#B99B6B"/><ellipse cx="296" cy="179" rx="9" ry="20" fill="#FAF6F0" opacity=".55"/>
+<ellipse cx="342" cy="202" rx="15" ry="34" fill="#D2BC93"/><ellipse cx="342" cy="194" rx="9" ry="20" fill="#FAF6F0" opacity=".55"/>
+<g fill="#8B9179" opacity=".8"><ellipse cx="196" cy="298" rx="36" ry="14" transform="rotate(-32 196 298)"/><ellipse cx="306" cy="292" rx="34" ry="13" transform="rotate(28 306 292)"/></g>
+<rect x="214" y="368" width="72" height="26" rx="8" fill="#B99B6B"/>
+<path d="M250 394v56" stroke="#5A503F" stroke-width="6" stroke-linecap="round"/>
 </svg>

@@ -12,7 +12,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/base.css">
@@ -310,6 +310,7 @@
       <button class="chip" type="button" data-filter="bouquet" aria-pressed="false">花束</button>
       <button class="chip" type="button" data-filter="potted" aria-pressed="false">盆花</button>
       <button class="chip" type="button" data-filter="dried" aria-pressed="false">乾燥花</button>
+      <button class="chip" type="button" data-filter="box" aria-pressed="false">花禮盒</button>
       <button class="chip" type="button" data-filter="subscription" aria-pressed="false">訂閱配花</button>
       </div>
     </div>
@@ -336,13 +337,13 @@
         <p class="product__price">NT$1,580</p>
       </article>
 
-      <article class="product reveal" data-id="table-arrangement" data-lead="0" data-occasion="self birthday" data-category="potted">
+      <article class="product reveal" data-id="table-arrangement" data-lead="0" data-occasion="self birthday visit" data-category="potted">
         <div class="product__media">
           <img src="assets/images/product-3.svg" alt="桌上盆花・小" width="500" height="500" loading="lazy">
         </div>
         <span class="product__tag">盆花</span>
         <h3 class="product__name">桌上盆花・小</h3>
-        <p class="product__desc">附陶盆，免修剪直接擺放，適合辦公桌與櫃檯。</p>
+        <p class="product__desc">附陶盆，免修剪直接擺放，適合辦公桌與病房。</p>
         <p class="product__price">NT$980</p>
       </article>
 
@@ -372,8 +373,159 @@
         </div>
         <span class="product__tag">訂閱配花</span>
         <h3 class="product__name">每週訂閱配花</h3>
-        <p class="product__desc">每週一束當季花材，可指定色系，隨時暫停。</p>
-        <p class="product__price">NT$3,600 <small>/ 月起</small></p>
+        <p class="product__desc">每週一束當季花材，可指定色系，隨時可暫停。</p>
+        <p class="product__price">NT$3,600</p>
+      </article>
+
+      <article class="product reveal" data-id="blush-rose-bouquet" data-lead="0" data-occasion="birthday self" data-category="bouquet">
+        <div class="product__media">
+          <img src="assets/images/product-7.svg" alt="粉霧玫瑰花束" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">花束</span>
+        <h3 class="product__name">粉霧玫瑰花束</h3>
+        <p class="product__desc">霧粉色系玫瑰與繡球，拍起來很好看的一束。</p>
+        <p class="product__price">NT$1,880</p>
+      </article>
+
+      <article class="product reveal" data-id="mini-bouquet" data-lead="0" data-occasion="birthday visit self" data-category="bouquet">
+        <div class="product__media">
+          <img src="assets/images/product-8.svg" alt="小花束・隨手送" width="500" height="500" loading="lazy">
+          <span class="badge">入門價</span>
+        </div>
+        <span class="product__tag">花束</span>
+        <h3 class="product__name">小花束・隨手送</h3>
+        <p class="product__desc">單手拿得住的份量，臨時要送禮時最實用。</p>
+        <p class="product__price">NT$680</p>
+      </article>
+
+      <article class="product reveal" data-id="lily-bouquet" data-lead="1" data-occasion="farewell visit" data-category="bouquet">
+        <div class="product__media">
+          <img src="assets/images/product-9.svg" alt="白百合致意花束" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">花束</span>
+        <h3 class="product__name">白百合致意花束</h3>
+        <p class="product__desc">純白百合與桔梗，用於追思與正式致意。</p>
+        <p class="product__price">NT$2,200</p>
+      </article>
+
+      <article class="product reveal" data-id="celebration-box" data-lead="1" data-occasion="opening birthday" data-category="box">
+        <div class="product__media">
+          <img src="assets/images/product-10.svg" alt="祝賀花禮盒・暖橘" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">花禮盒</span>
+        <h3 class="product__name">祝賀花禮盒・暖橘</h3>
+        <p class="product__desc">附提盒的花禮，不需花瓶，直接擺著就好。</p>
+        <p class="product__price">NT$2,680</p>
+      </article>
+
+      <article class="product reveal" data-id="desk-succulent" data-lead="0" data-occasion="self opening" data-category="potted">
+        <div class="product__media">
+          <img src="assets/images/product-11.svg" alt="多肉小盆栽" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">盆花</span>
+        <h3 class="product__name">多肉小盆栽</h3>
+        <p class="product__desc">桌上尺寸的多肉，兩週澆一次水就好。</p>
+        <p class="product__price">NT$620</p>
+      </article>
+
+      <article class="product reveal" data-id="orchid-pot" data-lead="2" data-occasion="opening farewell" data-category="potted">
+        <div class="product__media">
+          <img src="assets/images/product-12.svg" alt="蝴蝶蘭盆栽・雙梗" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">盆花</span>
+        <h3 class="product__name">蝴蝶蘭盆栽・雙梗</h3>
+        <p class="product__desc">雙梗蝴蝶蘭，開幕與正式場合的標準花禮。</p>
+        <p class="product__price">NT$2,800</p>
+      </article>
+
+      <article class="product reveal" data-id="recovery-pot" data-lead="1" data-occasion="visit" data-category="potted">
+        <div class="product__media">
+          <img src="assets/images/product-13.svg" alt="康復盆花・淺色系" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">盆花</span>
+        <h3 class="product__name">康復盆花・淺色系</h3>
+        <p class="product__desc">淺色系盆花，無香、免花瓶，適合病房。</p>
+        <p class="product__price">NT$1,180</p>
+      </article>
+
+      <article class="product reveal" data-id="memorial-pot" data-lead="1" data-occasion="farewell" data-category="potted">
+        <div class="product__media">
+          <img src="assets/images/product-14.svg" alt="素色盆花・追思" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">盆花</span>
+        <h3 class="product__name">素色盆花・追思</h3>
+        <p class="product__desc">白綠素色盆花，可直接放置於靈堂或家中。</p>
+        <p class="product__price">NT$1,980</p>
+      </article>
+
+      <article class="product reveal" data-id="dried-wreath" data-lead="1" data-occasion="self opening" data-category="dried">
+        <div class="product__media">
+          <img src="assets/images/product-15.svg" alt="乾燥花圈・原色" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">乾燥花</span>
+        <h3 class="product__name">乾燥花圈・原色</h3>
+        <p class="product__desc">原色乾燥花圈，掛著就好，不用照顧。</p>
+        <p class="product__price">NT$1,480</p>
+      </article>
+
+      <article class="product reveal" data-id="dried-jar" data-lead="0" data-occasion="self birthday" data-category="dried">
+        <div class="product__media">
+          <img src="assets/images/product-16.svg" alt="乾燥花瓶罐・小" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">乾燥花</span>
+        <h3 class="product__name">乾燥花瓶罐・小</h3>
+        <p class="product__desc">含玻璃瓶的乾燥花，最小份量的花禮。</p>
+        <p class="product__price">NT$520</p>
+      </article>
+
+      <article class="product reveal" data-id="preserved-box" data-lead="2" data-occasion="birthday farewell self" data-category="box">
+        <div class="product__media">
+          <img src="assets/images/product-17.svg" alt="永生花禮盒" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">花禮盒</span>
+        <h3 class="product__name">永生花禮盒</h3>
+        <p class="product__desc">永生花製作，不會枯萎，可保存兩年以上。</p>
+        <p class="product__price">NT$2,480</p>
+      </article>
+
+      <article class="product reveal" data-id="subscription-biweekly" data-lead="sub" data-occasion="self opening" data-category="subscription">
+        <div class="product__media">
+          <img src="assets/images/product-18.svg" alt="雙週訂閱配花" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">訂閱配花</span>
+        <h3 class="product__name">雙週訂閱配花</h3>
+        <p class="product__desc">每兩週一次，適合花量用不完的小家庭。</p>
+        <p class="product__price">NT$2,200</p>
+      </article>
+
+      <article class="product reveal" data-id="subscription-office" data-lead="sub" data-occasion="opening self" data-category="subscription">
+        <div class="product__media">
+          <img src="assets/images/product-19.svg" alt="企業空間週花" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">訂閱配花</span>
+        <h3 class="product__name">企業空間週花</h3>
+        <p class="product__desc">含花器與到府更換，開立發票、可月結。</p>
+        <p class="product__price">NT$4,800</p>
+      </article>
+
+      <article class="product reveal" data-id="sunflower-bouquet" data-lead="1" data-occasion="visit birthday" data-category="bouquet">
+        <div class="product__media">
+          <img src="assets/images/product-20.svg" alt="向日葵花束・打氣" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">花束</span>
+        <h3 class="product__name">向日葵花束・打氣</h3>
+        <p class="product__desc">亮色系花束，用來打氣比安慰更合適。</p>
+        <p class="product__price">NT$1,380</p>
+      </article>
+
+      <article class="product reveal" data-id="fruit-flower-box" data-lead="1" data-occasion="visit opening" data-category="box">
+        <div class="product__media">
+          <img src="assets/images/product-21.svg" alt="鮮花水果禮盒" width="500" height="500" loading="lazy">
+        </div>
+        <span class="product__tag">花禮盒</span>
+        <h3 class="product__name">鮮花水果禮盒</h3>
+        <p class="product__desc">鮮花配當季水果，探病與開幕都不失禮。</p>
+        <p class="product__price">NT$3,280</p>
       </article>
     </div>
 

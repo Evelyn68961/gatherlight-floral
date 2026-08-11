@@ -1,21 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="每週訂閱配花(佔位示意圖)">
-  <rect width="500" height="500" fill="#FAF6F0"/>
-  <circle cx="250" cy="230" r="140" fill="#E8EDE7" opacity=".7"/>
-
-  <path d="M132 262h236v148a18 18 0 0 1-18 18H150a18 18 0 0 1-18-18Z" fill="#C99A83"/>
-  <path d="M120 232h260v42H120Z" fill="#B4705A"/>
-  <path d="M250 232v196" stroke="#9A5C48" stroke-width="5"/>
-  <path d="M250 232c-34 0-52-14-52-34s28-24 40-8l12 42Z" fill="#F3E3DC" stroke="#9A5C48" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M250 232c34 0 52-14 52-34s-28-24-40-8l-12 42Z" fill="#F3E3DC" stroke="#9A5C48" stroke-width="4" stroke-linejoin="round"/>
-
-  <g stroke="#475A4B" stroke-width="5" fill="none" stroke-linecap="round">
-    <path d="M250 232V138"/><path d="M250 210 202 158"/><path d="M250 206 298 160"/>
-  </g>
-  <g fill="#7C8F72">
-    <path d="M234 200c-28-6-44-22-46-46 26-2 44 14 46 46Z"/>
-    <path d="M268 192c26-8 42-24 42-48-26 2-42 20-42 48Z"/>
-  </g>
-  <circle cx="202" cy="158" r="24" fill="#B4705A"/><circle cx="202" cy="158" r="9" fill="#F3E3DC"/>
-  <circle cx="298" cy="160" r="21" fill="#FAF6F0" stroke="#475A4B" stroke-width="4"/>
-  <circle cx="250" cy="138" r="27" fill="#C99A83"/><circle cx="250" cy="138" r="10" fill="#FAF6F0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="每週訂閱配花（佔位示意圖）">
+<rect width="500" height="500" fill="#E8EDE7"/>
+<circle cx="250" cy="222" r="124" fill="#FFFFFF" opacity=".45"/>
+<g stroke="#475A4B" stroke-width="5" fill="none" stroke-linecap="round"><path d="M250 300 250 186"/></g>
+<g fill="#7C8F72" opacity=".85"><ellipse cx="212" cy="268" rx="32" ry="13" transform="rotate(-28 212 268)"/><ellipse cx="292" cy="264" rx="30" ry="12" transform="rotate(24 292 264)"/></g>
+<circle cx="250" cy="186" r="27" fill="#FAF6F0" stroke="#475A4B" stroke-width="4"/><circle cx="250" cy="186" r="9" fill="#FFFFFF"/>
+<rect x="140" y="300" width="220" height="118" rx="10" fill="#FFFFFF" stroke="#475A4B" stroke-width="5"/>
+<path d="M195 300v118" stroke="#475A4B" stroke-width="4" opacity=".35"/><path d="M250 300v118" stroke="#475A4B" stroke-width="4" opacity=".35"/><path d="M305 300v118" stroke="#475A4B" stroke-width="4" opacity=".35"/>
+<rect x="128" y="288" width="244" height="24" rx="10" fill="#FAF6F0" stroke="#475A4B" stroke-width="5"/>
+<g transform="translate(250 358)" stroke="#475A4B" stroke-width="6" fill="none" stroke-linecap="round"><path d="M-22-8a22 22 0 1 1 6 22"/><path d="M-24-18v12h12"/></g>
 </svg>

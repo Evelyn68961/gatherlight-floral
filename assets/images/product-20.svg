@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="向日葵花束・打氣（佔位示意圖）">
+<rect width="500" height="500" fill="#EFE6DA"/>
+<circle cx="250" cy="210" r="132" fill="#FAF6F0" opacity=".55"/>
+<g stroke="#5A503F" stroke-width="6" fill="none" stroke-linecap="round">
+<path d="M250 370V186"/><path d="M250 356 186 238"/><path d="M250 356 314 244"/><path d="M250 344 154 290"/><path d="M250 344 346 296"/>
+</g>
+<g fill="#8B9179"><path d="M228 306c-38-6-60-26-64-58 36-4 60 14 64 58Z"/><path d="M274 294c36-8 56-28 58-58-36 2-56 20-58 58Z"/></g>
+<circle cx="186" cy="238" r="34" fill="#B99B6B"/><circle cx="186" cy="238" r="13" fill="#EFE6DA"/>
+<circle cx="314" cy="244" r="30" fill="#D2BC93"/><circle cx="314" cy="244" r="11" fill="#FAF6F0"/>
+<circle cx="250" cy="186" r="38" fill="#FAF6F0" stroke="#5A503F" stroke-width="5"/>
+<circle cx="250" cy="186" r="14" fill="#B99B6B"/>
+<circle cx="154" cy="290" r="21" fill="#EFE6DA" stroke="#5A503F" stroke-width="4"/>
+<circle cx="346" cy="296" r="19" fill="#B99B6B" opacity=".6"/>
+<path d="M172 370h156l-44 98a22 22 0 0 1-20 13h-28a22 22 0 0 1-20-13Z" fill="#FAF6F0" stroke="#5A503F" stroke-width="5" stroke-linejoin="round"/>
+<path d="M210 416h80" stroke="#B99B6B" stroke-width="6" stroke-linecap="round"/>
+</svg>

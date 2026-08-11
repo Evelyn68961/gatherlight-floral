@@ -56,6 +56,10 @@ and the awkward questions answered up front.
 - **Occasion + type filtering** — two independent dimensions ANDed together, occasion
   first, because that is how flowers are actually bought. Products carry several
   occasions, so matching is a membership test rather than equality.
+- **A catalogue deep enough to filter** — 21 products across five categories. Every
+  category returns at least three and every occasion at least five, so the two-dimension
+  filter has something to actually do. Of the 36 possible combinations only five come
+  back empty, and those are the honest ones — a subscription is not a birthday gift.
 - **Delivery-date filter and 最快可送達 sort** — for flowers *when* matters as much as
   *what*. Every product shows its earliest arrival date, computed from two rules the
   page already states elsewhere: the studio is shut Sunday and Monday (per its own
@@ -100,7 +104,7 @@ assets/               placeholder SVG illustrations & icons
 
 ## Tech notes
 
-- Fonts: Noto Sans TC + Noto Serif TC via Google Fonts.
+- Font: Noto Sans TC via Google Fonts — one family for the whole site, weights 400/500/600/700.
 - No dependencies, no bundler — deploy by uploading the folder (see `DEPLOYMENT.md`).
 - The contact form validates on the front end only; nothing is sent anywhere.
 - Measures are set in `em`, not `ch` — `ch` is the width of "0", roughly half a CJK

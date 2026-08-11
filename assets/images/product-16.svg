@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="乾燥花瓶罐・小（佔位示意圖）">
+<rect width="500" height="500" fill="#EFE6DA"/>
+<circle cx="250" cy="222" r="120" fill="#FAF6F0" opacity=".5"/>
+<g stroke="#5A503F" stroke-width="5" fill="none" stroke-linecap="round"><path d="M250 322V178"/><path d="M250 306 200 222"/><path d="M250 300 300 214"/></g>
+<circle cx="200" cy="222" r="22" fill="#B99B6B"/><circle cx="300" cy="214" r="19" fill="#D2BC93"/>
+<circle cx="250" cy="178" r="24" fill="#FAF6F0" stroke="#5A503F" stroke-width="4"/>
+<circle cx="250" cy="178" r="9" fill="#B99B6B"/>
+<g fill="#8B9179" opacity=".85"><ellipse cx="216" cy="268" rx="30" ry="12" transform="rotate(-30 216 268)"/><ellipse cx="286" cy="262" rx="28" ry="11" transform="rotate(26 286 262)"/></g>
+<path d="M196 322h108v96a20 20 0 0 1-20 20h-68a20 20 0 0 1-20-20Z" fill="#FAF6F0" fill-opacity=".55" stroke="#5A503F" stroke-width="5" stroke-linejoin="round"/>
+<rect x="188" y="310" width="124" height="20" rx="8" fill="#B99B6B"/>
+<path d="M196 400h108" stroke="#5A503F" stroke-width="5" opacity=".5"/>
+</svg>

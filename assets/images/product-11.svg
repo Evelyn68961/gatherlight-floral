@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="多肉小盆栽（佔位示意圖）">
+<rect width="500" height="500" fill="#E8EDE7"/>
+<circle cx="250" cy="238" r="118" fill="#FFFFFF" opacity=".5"/>
+<g fill="#7C8F72"><ellipse cx="250" cy="198" rx="30" ry="52" transform="rotate(0 250 198)"/><ellipse cx="192" cy="234" rx="30" ry="52" transform="rotate(-54 192 234)"/><ellipse cx="308" cy="234" rx="30" ry="52" transform="rotate(54 308 234)"/><ellipse cx="204" cy="300" rx="30" ry="52" transform="rotate(-122 204 300)"/><ellipse cx="296" cy="300" rx="30" ry="52" transform="rotate(122 296 300)"/><ellipse cx="250" cy="322" rx="30" ry="52" transform="rotate(180 250 322)"/></g>
+<g fill="#E5DCD0" opacity=".85"><ellipse cx="250" cy="224" rx="17" ry="30" transform="rotate(0 250 224)"/><ellipse cx="216" cy="252" rx="17" ry="30" transform="rotate(-54 216 252)"/><ellipse cx="284" cy="252" rx="17" ry="30" transform="rotate(54 284 252)"/><ellipse cx="250" cy="294" rx="17" ry="30" transform="rotate(180 250 294)"/></g>
+<circle cx="250" cy="264" r="15" fill="#FAF6F0"/>
+<path d="M176 350h148l-14 88a18 18 0 0 1-18 15H208a18 18 0 0 1-18-15Z" fill="#FAF6F0" stroke="#475A4B" stroke-width="5" stroke-linejoin="round"/>
+<rect x="168" y="336" width="164" height="24" rx="8" fill="#FFFFFF" stroke="#475A4B" stroke-width="5"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="康復盆花・淺色系（佔位示意圖）">
+<rect width="500" height="500" fill="#FAF6F0"/>
+<circle cx="250" cy="216" r="128" fill="#FFFFFF" opacity=".5"/>
+<g stroke="#475A4B" stroke-width="6" fill="none" stroke-linecap="round"><path d="M250 340V190"/><path d="M250 300c-46-4-70-30-72-70"/><path d="M250 276c44-6 66-30 68-66"/></g>
+<g fill="#8A9B7E" opacity=".92"><ellipse cx="166" cy="212" rx="46" ry="26" transform="rotate(-24 166 212)"/><ellipse cx="332" cy="200" rx="44" ry="25" transform="rotate(22 332 200)"/><ellipse cx="250" cy="164" rx="30" ry="48"/></g>
+<circle cx="200" cy="252" r="17" fill="#D98B76"/><circle cx="304" cy="244" r="14" fill="#E8B4A0"/>
+<path d="M156 340h188l-20 106a20 20 0 0 1-20 17H196a20 20 0 0 1-20-17Z" fill="#D98B76" stroke="#475A4B" stroke-width="5" stroke-linejoin="round"/>
+<rect x="148" y="326" width="204" height="26" rx="8" fill="#FFFFFF" stroke="#475A4B" stroke-width="5"/>
+</svg>

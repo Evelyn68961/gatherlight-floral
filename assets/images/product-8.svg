@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="小花束・隨手送（佔位示意圖）">
+<rect width="500" height="500" fill="#FAF6F0"/>
+<circle cx="250" cy="236" r="106" fill="#FFFFFF" opacity=".6"/>
+<g stroke="#475A4B" stroke-width="5" fill="none" stroke-linecap="round"><path d="M250 356V236"/><path d="M250 348 208 272"/><path d="M250 348 292 276"/></g>
+<g fill="#8A9B7E"><path d="M236 316c-28-4-44-20-46-42 26-3 44 10 46 42Z"/></g>
+<circle cx="208" cy="272" r="26" fill="#D98B76"/><circle cx="208" cy="272" r="9" fill="#FFFFFF"/>
+<circle cx="292" cy="276" r="23" fill="#E8B4A0"/><circle cx="292" cy="276" r="8" fill="#FAF6F0"/>
+<circle cx="250" cy="236" r="28" fill="#FFFFFF" stroke="#475A4B" stroke-width="4"/>
+<circle cx="250" cy="236" r="10" fill="#D98B76"/>
+<path d="M204 356h92l-24 72a18 18 0 0 1-17 12h-10a18 18 0 0 1-17-12Z" fill="#FFFFFF" stroke="#475A4B" stroke-width="5" stroke-linejoin="round"/>
+</svg>

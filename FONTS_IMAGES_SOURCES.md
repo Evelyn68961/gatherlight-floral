@@ -10,7 +10,6 @@
 
 | 字體 | 用途 | 來源 | 授權 | 費用 |
 |---|---|---|---|---|
-| Noto Serif TC | 標題（h1 / h2、Logo 字標） | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Serif+TC) | SIL Open Font License 1.1 | 免費，可商用 |
 | Noto Sans TC | 內文、按鈕、表單 | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+TC) | SIL Open Font License 1.1 | 免費，可商用 |
 
 **退回字體（未載入時）：**
