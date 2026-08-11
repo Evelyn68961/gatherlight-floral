@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="永生花禮盒（佔位示意圖）">
 <rect width="500" height="500" fill="#EAE4EC"/>
 <circle cx="250" cy="236" r="126" fill="#FBF8FB" opacity=".45"/>
-<rect x="128" y="268" width="244" height="150" rx="12" fill="#FBF8FB" stroke="#4A4152" stroke-width="5"/>
-<rect x="112" y="248" width="276" height="44" rx="10" fill="#A98BA5" stroke="#4A4152" stroke-width="5"/>
-<path d="M250 292v126" stroke="#4A4152" stroke-width="5" opacity=".4"/>
-<circle cx="190" cy="224" r="32" fill="#A98BA5"/><circle cx="190" cy="224" r="10" fill="#EAE4EC" opacity=".7"/><circle cx="250" cy="200" r="38" fill="#CBB4C6"/><circle cx="250" cy="200" r="12" fill="#EAE4EC" opacity=".7"/><circle cx="310" cy="226" r="30" fill="#A98BA5"/><circle cx="310" cy="226" r="10" fill="#EAE4EC" opacity=".7"/><circle cx="216" cy="246" r="20" fill="#FBF8FB"/><circle cx="216" cy="246" r="6" fill="#EAE4EC" opacity=".7"/><circle cx="292" cy="248" r="18" fill="#FBF8FB"/><circle cx="292" cy="248" r="6" fill="#EAE4EC" opacity=".7"/>
-<g fill="#7C8F72" opacity=".9"><ellipse cx="156" cy="252" rx="34" ry="14" transform="rotate(-26 156 252)"/><ellipse cx="344" cy="252" rx="32" ry="13" transform="rotate(24 344 252)"/></g>
+<ellipse cx="376" cy="392" rx="62" ry="18" fill="#A98BA5" stroke="#4A4152" stroke-width="5"/>
+<path d="M314 392v-22a62 18 0 0 1 124 0v22" fill="#A98BA5" stroke="#4A4152" stroke-width="5"/>
+<path d="M148 288h188v104a94 26 0 0 1-188 0Z" fill="#FBF8FB" stroke="#4A4152" stroke-width="5"/>
+<ellipse cx="242" cy="288" rx="94" ry="26" fill="#EAE4EC" stroke="#4A4152" stroke-width="5"/>
+<path d="M180 372a94 26 0 0 0 124 0" fill="none" stroke="#4A4152" stroke-width="4" opacity=".35"/>
+<circle cx="196" cy="248" r="28" fill="#A98BA5" stroke="#4A4152" stroke-width="4"/><circle cx="196" cy="248" r="9" fill="#EAE4EC" opacity=".7"/><circle cx="250" cy="226" r="34" fill="#CBB4C6" stroke="#4A4152" stroke-width="4"/><circle cx="250" cy="226" r="11" fill="#EAE4EC" opacity=".7"/><circle cx="300" cy="250" r="26" fill="#A98BA5" stroke="#4A4152" stroke-width="4"/><circle cx="300" cy="250" r="8" fill="#EAE4EC" opacity=".7"/><circle cx="222" cy="272" r="17" fill="#FBF8FB" stroke="#4A4152" stroke-width="4"/><circle cx="222" cy="272" r="5" fill="#EAE4EC" opacity=".7"/><circle cx="280" cy="274" r="15" fill="#FBF8FB" stroke="#4A4152" stroke-width="4"/><circle cx="280" cy="274" r="5" fill="#EAE4EC" opacity=".7"/>
+<g fill="#7C8F72" opacity=".9"><ellipse cx="164" cy="270" rx="30" ry="13" transform="rotate(-30 164 270)"/><ellipse cx="330" cy="272" rx="28" ry="12" transform="rotate(28 330 272)"/></g>
 </svg>

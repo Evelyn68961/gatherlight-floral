@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="康乃馨花禮盒（佔位示意圖）">
+<rect width="500" height="500" fill="#F7E4E6"/>
+<circle cx="250" cy="236" r="126" fill="#FFF8FA" opacity=".45"/>
+<rect x="128" y="268" width="244" height="150" rx="12" fill="#FFF8FA" stroke="#4A3A40" stroke-width="5"/>
+<rect x="112" y="248" width="276" height="44" rx="10" fill="#C4718A" stroke="#4A3A40" stroke-width="5"/>
+<path d="M250 292v126" stroke="#4A3A40" stroke-width="5" opacity=".4"/>
+<circle cx="190" cy="224" r="32" fill="#C4718A" stroke="#4A3A40" stroke-width="4"/><circle cx="190" cy="224" r="10" fill="#F7E4E6" opacity=".7"/><circle cx="250" cy="200" r="38" fill="#DFA8B6" stroke="#4A3A40" stroke-width="4"/><circle cx="250" cy="200" r="12" fill="#F7E4E6" opacity=".7"/><circle cx="310" cy="226" r="30" fill="#C4718A" stroke="#4A3A40" stroke-width="4"/><circle cx="310" cy="226" r="10" fill="#F7E4E6" opacity=".7"/><circle cx="216" cy="246" r="20" fill="#FFF8FA" stroke="#4A3A40" stroke-width="4"/><circle cx="216" cy="246" r="6" fill="#F7E4E6" opacity=".7"/><circle cx="292" cy="248" r="18" fill="#FFF8FA" stroke="#4A3A40" stroke-width="4"/><circle cx="292" cy="248" r="6" fill="#F7E4E6" opacity=".7"/>
+<g fill="#7C8F72" opacity=".9"><ellipse cx="156" cy="252" rx="34" ry="14" transform="rotate(-26 156 252)"/><ellipse cx="344" cy="252" rx="32" ry="13" transform="rotate(24 344 252)"/></g>
+</svg>

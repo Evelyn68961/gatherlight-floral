@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="每月一束・輕訂閱（佔位示意圖）">
+<rect width="500" height="500" fill="#F7E9E4"/>
+<circle cx="250" cy="222" r="124" fill="#FFF8F5" opacity=".45"/>
+<g stroke="#4A4340" stroke-width="5" fill="none" stroke-linecap="round"><path d="M250 300 250 186"/></g>
+<g fill="#7C8F72" opacity=".85"><ellipse cx="212" cy="268" rx="32" ry="13" transform="rotate(-28 212 268)"/><ellipse cx="292" cy="264" rx="30" ry="12" transform="rotate(24 292 264)"/></g>
+<circle cx="250" cy="186" r="27" fill="#C98274" stroke="#4A4340" stroke-width="4"/><circle cx="250" cy="186" r="9" fill="#FFF8F5"/>
+<rect x="140" y="300" width="220" height="118" rx="10" fill="#FFF8F5" stroke="#4A4340" stroke-width="5"/>
+<path d="M195 300v118" stroke="#4A4340" stroke-width="4" opacity=".35"/><path d="M250 300v118" stroke="#4A4340" stroke-width="4" opacity=".35"/><path d="M305 300v118" stroke="#4A4340" stroke-width="4" opacity=".35"/>
+<rect x="128" y="288" width="244" height="24" rx="10" fill="#C98274" stroke="#4A4340" stroke-width="5"/>
+<g transform="translate(250 358)" stroke="#4A4340" stroke-width="6" fill="none" stroke-linecap="round"><path d="M-22-8a22 22 0 1 1 6 22"/><path d="M-24-18v12h12"/></g>
+</svg>

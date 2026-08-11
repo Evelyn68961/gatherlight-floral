@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="空間乾燥花季配（佔位示意圖）">
+<rect width="500" height="500" fill="#EAE4EC"/>
+<circle cx="250" cy="222" r="124" fill="#FBF8FB" opacity=".45"/>
+<g stroke="#4A4152" stroke-width="5" fill="none" stroke-linecap="round"><path d="M250 300 190 208"/><path d="M250 300 250 178"/><path d="M250 300 312 206"/></g>
+<g fill="#7C8F72" opacity=".85"><ellipse cx="212" cy="268" rx="32" ry="13" transform="rotate(-28 212 268)"/><ellipse cx="292" cy="264" rx="30" ry="12" transform="rotate(24 292 264)"/></g>
+<circle cx="190" cy="208" r="20" fill="#CBB4C6" stroke="#4A4152" stroke-width="4"/><circle cx="190" cy="208" r="6" fill="#FBF8FB"/><circle cx="250" cy="178" r="26" fill="#A98BA5" stroke="#4A4152" stroke-width="4"/><circle cx="250" cy="178" r="8" fill="#FBF8FB"/><circle cx="312" cy="206" r="19" fill="#CBB4C6" stroke="#4A4152" stroke-width="4"/><circle cx="312" cy="206" r="6" fill="#FBF8FB"/>
+<rect x="102" y="300" width="296" height="118" rx="10" fill="#FBF8FB" stroke="#4A4152" stroke-width="5"/>
+<path d="M151 300v118" stroke="#4A4152" stroke-width="4" opacity=".35"/><path d="M200 300v118" stroke="#4A4152" stroke-width="4" opacity=".35"/><path d="M249 300v118" stroke="#4A4152" stroke-width="4" opacity=".35"/><path d="M298 300v118" stroke="#4A4152" stroke-width="4" opacity=".35"/><path d="M347 300v118" stroke="#4A4152" stroke-width="4" opacity=".35"/>
+<rect x="90" y="288" width="320" height="24" rx="10" fill="#A98BA5" stroke="#4A4152" stroke-width="5"/>
+<g transform="translate(250 358)" stroke="#4A4152" stroke-width="6" fill="none" stroke-linecap="round"><path d="M-22-8a22 22 0 1 1 6 22"/><path d="M-24-18v12h12"/></g>
+</svg>

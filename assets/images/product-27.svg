@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="追思花禮盒・素色（佔位示意圖）">
+<rect width="500" height="500" fill="#DDE5DC"/>
+<circle cx="250" cy="236" r="126" fill="#FFFFFF" opacity=".45"/>
+<ellipse cx="376" cy="392" rx="62" ry="18" fill="#FFFFFF" stroke="#334437" stroke-width="5"/>
+<path d="M314 392v-22a62 18 0 0 1 124 0v22" fill="#FFFFFF" stroke="#334437" stroke-width="5"/>
+<path d="M148 288h188v104a94 26 0 0 1-188 0Z" fill="#FFFFFF" stroke="#334437" stroke-width="5"/>
+<ellipse cx="242" cy="288" rx="94" ry="26" fill="#DDE5DC" stroke="#334437" stroke-width="5"/>
+<path d="M180 372a94 26 0 0 0 124 0" fill="none" stroke="#334437" stroke-width="4" opacity=".35"/>
+<circle cx="196" cy="248" r="28" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="196" cy="248" r="9" fill="#DDE5DC" opacity=".7"/><circle cx="250" cy="226" r="34" fill="#E8EDE7" stroke="#334437" stroke-width="4"/><circle cx="250" cy="226" r="11" fill="#DDE5DC" opacity=".7"/><circle cx="300" cy="250" r="26" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="300" cy="250" r="8" fill="#DDE5DC" opacity=".7"/><circle cx="222" cy="272" r="17" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="222" cy="272" r="5" fill="#DDE5DC" opacity=".7"/><circle cx="280" cy="274" r="15" fill="#FFFFFF" stroke="#334437" stroke-width="4"/><circle cx="280" cy="274" r="5" fill="#DDE5DC" opacity=".7"/>
+<g fill="#5F7360" opacity=".9"><ellipse cx="164" cy="270" rx="30" ry="13" transform="rotate(-30 164 270)"/><ellipse cx="330" cy="272" rx="28" ry="12" transform="rotate(28 330 272)"/></g>
+</svg>
