@@ -939,6 +939,27 @@
   padding: var(--s-6);
   visibility: hidden;
 }
+
+/* `visibility` here is a gate, not an animation: it decides whether the dialog
+   can be focused at all, so it has to apply on the tick the attribute changes.
+
+   Under prefers-reduced-motion it didn't. base.css sets
+   `transition-duration: 0.01ms !important` on `*`, and any element that
+   declares no transition-property gets the initial value `all`. `visibility`
+   is inherited, so opening the dialog started a visibility transition on every
+   descendant — each one stayed `hidden`, and a hidden element cannot take
+   focus. quickview.js's focus() call silently did nothing, focus stayed on the
+   page behind the scrim, and Tab carried on walking the background: a dialog
+   that was modal in appearance only, for exactly the users least able to
+   tolerate it.
+
+   Nothing in a dialog should animate under reduced motion anyway, so the
+   subtree opts out entirely. Scoped to the overlay so the rest of the page
+   keeps the standard reduced-motion treatment. */
+@media (prefers-reduced-motion: reduce) {
+  .modal,
+  .modal * { transition: none !important; }
+}
 .modal[data-open] { visibility: visible; }
 .modal__scrim {
   position: absolute;

@@ -229,7 +229,31 @@ var PRODUCTS = {
   var modal = document.getElementById('quickView');
   if (!grid || !modal) return;
 
+  var panel = modal.querySelector('.modal__panel');
   var lastFocus = null;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --------------------------------------------------------- scroll lock */
+  /* Without this the page behind the scrim still scrolls on wheel and
+     trackpad, so the modal sits still while the whole site slides around
+     underneath it.
+
+     `overflow: hidden` on <html> rather than `position: fixed` on <body>:
+     the header is `position: sticky`, and taking body out of flow drops it
+     back to its natural — already scrolled past — position, which reads as
+     the header jumping. Hiding the scrollbar also widens the viewport, so
+     the width it gave up is handed to body as padding; without that the
+     entire layout shifts sideways the moment the modal opens. */
+  function lockScroll() {
+    var bar = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.overflow = 'hidden';
+    if (bar > 0) document.body.style.paddingRight = bar + 'px';
+  }
+
+  function unlockScroll() {
+    document.documentElement.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
 
   /* Injected, not authored: the button is useless without JS. */
   function injectButtons() {
@@ -271,19 +295,81 @@ var PRODUCTS = {
     modal.querySelector('#qvLead').textContent = extra.lead || '—';
 
     lastFocus = document.activeElement;
+    lockScroll();
     modal.setAttribute('data-open', '');
+    /* Force the style recalculation before focusing. The dialog is
+       visibility:hidden until the attribute change is applied, and a hidden
+       element cannot take focus — setAttribute() followed by focus() in the
+       same tick can therefore silently do nothing, leaving focus on the page
+       behind the scrim where Tab then walks the background. Reading a layout
+       property flushes the pending recalc. */
+    void modal.offsetHeight;
     modal.querySelector('.modal__close').focus();
   }
 
-  function close() {
+  /* `restoreFocus` is false when the caller is about to move focus somewhere
+     else itself — sending it back to the card first would scroll the page to
+     the card and then away again. */
+  function close(restoreFocus) {
+    if (!modal.hasAttribute('data-open')) return;
     modal.removeAttribute('data-open');
-    if (lastFocus) lastFocus.focus();
+    unlockScroll();
+    if (restoreFocus !== false && lastFocus) lastFocus.focus();
   }
 
-  modal.querySelector('.modal__scrim').addEventListener('click', close);
-  modal.querySelector('.modal__close').addEventListener('click', close);
+  modal.querySelector('.modal__scrim').addEventListener('click', function () { close(); });
+  modal.querySelector('.modal__close').addEventListener('click', function () { close(); });
+
+  /* ------------------------------------------------- in-page links */
+  /* 「詢問這款花禮」 points at #contact. Left alone, the browser scrolls the
+     page to the contact form while the modal stays open on top of it — you
+     press a button and the entire site slides past behind the scrim, which is
+     what the bug report described. The dialog has to close first, and only
+     then may the page move.
+
+     The href stays a real href so the link still works with the script gone. */
+  panel.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    var id = link.getAttribute('href').slice(1);
+    var target = id && document.getElementById(id);
+    if (!target) return;
+
+    e.preventDefault();
+    close(false);
+
+    /* Focus lands on the destination rather than back on the product card,
+       so the next Tab continues from where the eye is. preventScroll keeps
+       focus() from jumping there instantly and stealing the smooth scroll. */
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  });
+
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && modal.hasAttribute('data-open')) close();
+    if (!modal.hasAttribute('data-open')) return;
+
+    if (e.key === 'Escape') { close(); return; }
+
+    /* Keep Tab inside the dialog. Without this, tabbing walks straight out
+       into the product grid behind the scrim — the same "it isn't really
+       modal" problem as the scrolling. */
+    if (e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      panel.querySelectorAll('a[href], button:not([disabled])')
+    ).filter(function (el) { return el.offsetParent !== null; });
+    if (!f.length) return;
+
+    var first = f[0];
+    var last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   });
 
   injectButtons();
