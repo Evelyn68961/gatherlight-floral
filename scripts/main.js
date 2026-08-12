@@ -321,6 +321,18 @@
       if (status) {
         status.textContent = '已收到您的諮詢，我們會在 1–2 個工作天內回覆。';
         status.hidden = false;
+        /* The status sits after the submit button at the foot of a tall form,
+           so on a laptop it renders just past the fold — measured at 845px in
+           an 844px viewport. The form clears at the same moment, so all the
+           visitor sees is their text vanishing with nothing to explain it,
+           which reads as a broken button. Move to the confirmation: focus for
+           anyone on a keyboard or screen reader, scroll for everyone else. */
+        status.setAttribute('tabindex', '-1');
+        status.focus({ preventScroll: true });
+        status.scrollIntoView({
+          behavior: reduceMotion ? 'auto' : 'smooth',
+          block: 'center'
+        });
       }
       form.reset();
     });
