@@ -23,7 +23,11 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, p, figure, blockquote, ul, ol, dl { margin: 0; }
+/* `dd` belongs in this list: the UA default gives it margin-inline-start: 40px,
+   which indents any definition list out of alignment with the prose above it
+   and takes 40px off the width its content has to wrap in — enough to break a
+   nine-character label onto a second line and strand one character there. */
+h1, h2, h3, h4, p, figure, blockquote, ul, ol, dl, dd { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 
 /* 700 rather than the 500 the serif used: at the same optical size a sans face

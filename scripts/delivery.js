@@ -104,7 +104,10 @@
       var d = earliest(card.dataset.lead);
       var p = document.createElement('p');
       p.className = 'product__eta';
-      p.textContent = d ? '最快 ' + fmt(d) + ' 送達' : '訂閱制，配送日另約';
+      /* A space before the date but none after it: 「最快 8/13」 needs one because
+         a digit follows Chinese, while fmt() already ends in a full-width ）,
+         and a space between two full-width characters is just a hole. */
+      p.textContent = d ? '最快 ' + fmt(d) + '送達' : '訂閱制，配送日另約';
       priceEl.parentNode.insertBefore(p, priceEl.nextSibling);
     });
   }
