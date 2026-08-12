@@ -49,6 +49,11 @@
   --s-2:  0.5rem;   /*  8 */
   --s-3:  0.75rem;  /* 12 */
   --s-4:  1rem;     /* 16 */
+  --s-5:  1.25rem;  /* 20 — the LINE button's horizontal padding asked for this
+                       and the scale skipped it. An unresolvable var() is
+                       invalid at computed-value time, so the whole `padding`
+                       shorthand was dropped, not just the horizontal half, and
+                       the button rendered flush against its own label. */
   --s-6:  1.5rem;   /* 24 */
   --s-8:  2rem;     /* 32 */
   --s-12: 3rem;     /* 48 */
